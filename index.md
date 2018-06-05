@@ -4,4 +4,5 @@
 
 layout: home
 ---
-# Some text
+
+<p>Some text</p>
