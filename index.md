@@ -6,7 +6,4 @@ layout: home
 ---
 
 <h1>asdas</h1>
-<h1>asdas</h1>
-<h1>asdas</h1>
-<h2>asdasd</h2>
-<p>Some text</p>
+
