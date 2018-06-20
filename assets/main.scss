@@ -3,7 +3,9 @@
 ---
 
 @import "minima";
-@import "lib/base";
-@import "variables";
 @import "reset";
+@import "variables";
+@import "lib/base";
 @import "flexboxgrid";
+@import "layouts";
+@import "common_elements/footer";
