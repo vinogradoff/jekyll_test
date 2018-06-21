@@ -1,0 +1,22 @@
+%button
+	border-radius: 8px
+	background-color: $heliotrope
+	color: $white
+	margin: 10px 0
+	text-align: center
+	border: none
+	font-size: 16px
+	font-weight: 500
+	// height: 58px
+	line-height: 24px
+	padding: 16px 10px
+	min-width: 200px
+	&:hover,
+	&.hover-state
+		background-color: darken($heliotrope, 8%)
+	&:disabled,
+	&.disabled-state
+		color: $jumbo
+		background-color: $porcelain
+.button
+	@extend %button
