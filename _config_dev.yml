@@ -39,6 +39,7 @@ markdown: kramdown
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-coffeescript
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
@@ -50,6 +51,7 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - node_modules
+  - package-lock.json
   - README.md
 #   - vendor/bundle/
 #   - vendor/cache/

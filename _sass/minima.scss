@@ -49,3 +49,11 @@ $on-laptop:        800px !default;
   "minima/layout",
   "minima/syntax-highlighting"
 ;
+
+@import "reset";
+@import "variables";
+@import "lib/base";
+@import "layouts";
+@import "typography";
+@import "buttons_and_icons";
+@import "common_elements/footer";
