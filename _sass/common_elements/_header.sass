@@ -1,9 +1,80 @@
+$header-height: 64px
+
 .header
 	position: fixed
 	z-index: 5
 	width: 100%
 	top: 0
 	background-color: $baltic-sea
-	padding: 14px 0
+	padding: 12px 0
+	max-height: $header-height
 	.logo
-		max-width: 140px
+		&-image
+			max-width: 140px
+			max-height: 40px
+		&-text
+			display: none
+			+min-screen($mobile-md)
+				display: block
+	&-right
+		justify-content: flex-end
+		display: flex
+		align-items: center
+	//munu styles
+	&_menu
+		overflow: hidden
+		position: fixed
+		height: 0
+		left: 0
+		top: $header-height
+		width: 100%
+		z-index: 150
+		display: flex
+		align-items: center
+		justify-content: center
+		background-color: $baltic-sea
+		transition: height $t-n $tf-def
+		.is-menu-show &
+			transition: height $t-n $tf-def $t-n
+			height: calc(100vh - #{$header-height})
+		+min-screen($desctop)
+			position: static
+			width: auto
+			height: auto
+			overflow: auto
+			display: block
+			background-color: transparent
+			.is-menu-show &
+				height: auto
+		&-list
+			display: inline-block
+			overflow: hidden
+			+min-screen($desctop)
+				display: block
+		&-item
+			text-align: center
+			display: block
+			+min-screen($desctop)
+				display: inline-block
+		+min-screen($desctop)
+			&-item + &-item
+				margin-left: 30px
+
+		&-link
+			display: inline-block
+			color: $white
+			text-decoration: none
+			text-transform: uppercase
+			font-weight: 700
+			font-size: $fs-s
+			line-height: 36px
+			letter-spacing: 1.4px
+			text-align: center
+			transition: color $t-n $tf-def
+			&.active
+				color: transparent
+			+min-screen($desctop)
+				font-size: $fs-xs
+				line-height: $lh-ss
+				letter-spacing: 1.2px
+

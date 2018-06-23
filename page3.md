@@ -1,7 +1,7 @@
 ---
 layout: page
-title: page1
-permalink: /page1/
+title: page3
+permalink: /page3/
 ---
 
 <h1>asdas</h1>

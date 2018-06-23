@@ -7,7 +7,6 @@
 	border: none
 	font-size: 16px
 	font-weight: 500
-	// height: 58px
 	line-height: 24px
 	padding: 16px 10px
 	min-width: 200px
@@ -22,13 +21,15 @@
 	@extend %button
 
 .toggle-menu-button
-	float: right
 	width: 28px
 	height: 28px
 	border: none
 	background: transparent
 	position: relative
 	cursor: pointer
+	+min-screen($desctop)
+		display: none
+
 	&:focus
 		outline:none
 	&:after,

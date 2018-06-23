@@ -32,5 +32,10 @@
 		$body.toggleClass(menuShowClass);
 	});
 
+	$(document).click( function(event){
+		if( $(event.target).closest('.header').length )
+			return;
+		$body.removeClass(menuShowClass);
+	});
 
 })(jQuery);
