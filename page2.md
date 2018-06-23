@@ -1,6 +1,6 @@
 ---
 layout: page
-title: page2
+title: Use Cases
 permalink: /page2/
 ---
 

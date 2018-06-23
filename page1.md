@@ -1,6 +1,6 @@
 ---
 layout: page
-title: page1
+title: Product
 permalink: /page1/
 ---
 
