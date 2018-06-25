@@ -12,21 +12,44 @@
 			fill: $black
 	&-social
 		text-align: center
-		+min-screen($mobile)
+		+min-screen($tablet)
 			text-align: right
 	&-copy
 		font-size: 16px
 		font-weight: 500
 		color: $jumbo
 		margin-bottom: 40px
-		+min-screen($mobile)
+		text-align: center
+		+min-screen($tablet)
 			margin-bottom: 0
+			text-align: left
 	&-top
 		margin-bottom: 56px
 	&_menu
 		width: 100%
 		&-item
+			padding-top: 10px
+			padding-bottom: 10px
+			display: block
+			border-bottom: 2px solid $alabaster
+			+min-screen($tablet)
+				border-bottom: none
+		&-link
+			font-size: 16px
+			line-height: 28px
+			font-weight: 600
+			text-decoration: none
 
 	.footer_submenu
 		display: none
-		
+		+min-screen($tablet)
+			display: block
+		&-item
+			padding-top: 10px
+			padding-bottom: 12px
+		&-link
+			font-size: 14px
+			line-height: 1.4
+			font-weight: 500
+			text-decoration: none
+			
