@@ -2,13 +2,14 @@
 	<div class="container">
 		<div class="row footer-logo">
 			<div class="col-xs-12">
-				LOGO
+				<div>Temporary LOGO</div>
+				{% include selenide-logo.svg %}
 			</div>
 		</div>
 		<div class="footer-top">
 			<nav class="row footer_menu">
-				<ul class="footer_menu-list col-md-3 col-xs-12">
-					<li class="footer_menu-item">
+				<ul class="footer_menu-list">
+					<li class="footer_menu-item col-sm-3 col-xs-12">
 						<a class="footer_menu-link" href="#">PRODUCT</a>
 						<ul class="footer_submenu">
 							<li class="footer_submenu-item">
@@ -19,9 +20,7 @@
 								<a class="footer_submenu-link" href="#">Why Selenise?</a></li>
 						</ul>
 					</li>
-				</ul>
-				<ul class="footer_menu-list col-md-3 col-xs-12">
-					<li class="footer_menu-item">
+					<li class="footer_menu-item col-sm-3 col-xs-12">
 						<a class="footer_menu-link" href="#">USE CASES</a>
 						<ul class="footer_submenu">
 							<li class="footer_submenu-item">
@@ -32,9 +31,7 @@
 								<a class="footer_submenu-link" href="#">Contribute to Selenide</a></li>
 						</ul>
 					</li>
-				</ul>
-				<ul class="footer_menu-list col-md-3 col-xs-12">
-					<li class="footer_menu-item">
+					<li class="footer_menu-item col-sm-3 col-xs-12">
 						<a class="footer_menu-link" href="#">RESOURCES</a>
 						<ul class="footer_submenu">
 							<li class="footer_submenu-item">
@@ -45,9 +42,7 @@
 								<a class="footer_submenu-link" href="#">Documentation</a></li>
 						</ul>
 					</li>
-				</ul>
-				<ul class="footer_menu-list col-md-3 col-xs-12">
-					<li class="footer_menu-item">
+					<li class="footer_menu-item col-sm-3 col-xs-12"">
 						<a class="footer_menu-link" href="#">EXTRAS</a>
 						<ul class="footer_submenu">
 							<li class="footer_submenu-item">
@@ -62,8 +57,8 @@
 			</nav>
 		</div>
 		<div class="row footer-bot">
-			<p class="footer-copy col-xs-12 col-md-6">© 2018 Selenide</p>
-			<div class="footer-social col-xs-12 col-md-6">
+			<p class="footer-copy col-xs-12 col-sm-6">© 2018 Selenide</p>
+			<div class="footer-social col-xs-12 col-sm-6">
 				{%- include social.html -%}
 			</div>
 		</div>
