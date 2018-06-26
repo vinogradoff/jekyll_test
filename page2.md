@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Use Cases
+title: Quick Start
 permalink: /page2/
 ---
 
