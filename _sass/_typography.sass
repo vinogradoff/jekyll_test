@@ -16,13 +16,13 @@ a
 
 h1
 	font-size: 48px
-	margin-bottom: .5em
+	margin: .5em 0 1em
 	font-weight: normal
 	+min-screen($tablet)
 		font-size: 64px
 h2
 	font-size: 32px
-	margin-bottom: .5em
+	margin: .5em 0 1em
 	font-weight: normal
 	+min-screen($tablet)
 		font-size: 40px
@@ -67,6 +67,44 @@ p
 	color: $gray
 .color-gray-dark
 	color: $gray-600
+
+.pink-link
+	font-size: inherit
+	font-weight: 500
+	color: $pink
+
+.center-text
+	text-align: center
+
+.right-text
+	text-align: right
+
+.left-text
+	text-align: left
+
+.right-text-sm
+	+min-screen($tablet)
+		text-align: right
+
+.right-text-md
+	+min-screen($desctop)
+		text-align: right
+
+.center-text-sm
+	+min-screen($tablet)
+		text-align: center
+
+.center-text-md
+	+min-screen($desctop)
+		text-align: center
+
+.left-text-sm
+	+min-screen($tablet)
+		text-align: left
+
+.left-text-md
+	+min-screen($desctop)
+		text-align: left
 
 .block-on-mobile
 	display: block
