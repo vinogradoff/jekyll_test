@@ -1,5 +1,6 @@
 %button
 	border-radius: 8px
+	display: inline-block
 	background-color: $pink
 	color: $white
 	margin: 10px 0
@@ -10,13 +11,16 @@
 	line-height: 24px
 	padding: 16px 10px
 	min-width: 200px
+	cursor: pointer
 	&:hover,
 	&.hover-state
 		background-color: darken($pink, 8%)
+		color: $white
 	&:disabled,
 	&.disabled-state
 		color: $gray-600
 		background-color: $gray-200
+
 .button
 	@extend %button
 
