@@ -12,17 +12,39 @@
 	padding: 16px 10px
 	min-width: 200px
 	cursor: pointer
-	&:hover,
-	&.hover-state
-		background-color: darken($pink, 8%)
-		color: $white
+	+min-screen($desctop)
+		&:hover,
+		&.hover-state
+			background-color: darken($pink, 8%)
+			color: $white
 	&:disabled,
 	&.disabled-state
 		color: $gray-600
 		background-color: $gray-200
 
+%mobile-wide-button,
+%tablet-wide-button
+
+%button-mobile-wide
+	display: block
+	min-width: 100%
+	+min-screen($tablet)
+		display: inline-block
+		min-width: 200px
+%button-tablet-wide
+	display: block
+	min-width: 100%
+	+min-screen($desctop)
+		display: inline-block
+		min-width: 200px
+
+
 .button
 	@extend %button
+.button-mobile-wide
+	@extend %button-mobile-wide
+.button-tablet-wide
+	@extend %button-tablet-wide
 
 .toggle-menu-button
 	width: 28px

@@ -13,9 +13,8 @@ $header-height: 64px
 			max-width: 140px
 			max-height: 40px
 		&-text
-			display: none
-			+min-screen($mobile-md)
-				display: block
+			.is-menu-show &
+				display: none
 	&-right
 		justify-content: flex-end
 		display: flex
