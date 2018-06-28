@@ -22,6 +22,8 @@ body
 	background-color: $white
 	display: flex
 	flex-direction: column
+	+min-screen($mobile-md)
+		overflow-x: hidden
 
 .page-content
 	padding-top: 64px

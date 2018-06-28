@@ -13,8 +13,10 @@ $header-height: 64px
 			max-width: 140px
 			max-height: 40px
 		&-text
+			transition: opacity $t-n $tf-def
 			.is-menu-show &
-				display: none
+				transition: opacity $t-n $tf-def .4s
+				opacity: 0
 	&-right
 		justify-content: flex-end
 		display: flex
