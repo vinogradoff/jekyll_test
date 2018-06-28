@@ -17,11 +17,11 @@
 
 # DEV build
 # jekyll build --config _config.yml,_config_dev.yml --watch
-# bundle exec jekyll serve --config _config.yml,_config_dev.yml
+# bundle exec jekyll serve --config _config.yml,_config_dev.yml  --livereload
 
 # DEV build with drafts
 # jekyll build --config _config.yml,_config_dev.yml --watch --drafts
-# bundle exec jekyll serve --config _config.yml,_config_dev.yml --drafts
+# bundle exec jekyll serve --config _config.yml,_config_dev.yml --drafts --livereload
 
 title: selenide
 email: your-email@example.com

@@ -1,6 +1,6 @@
 %button
 	border-radius: 8px
-	background-color: $heliotrope
+	background-color: $pink
 	color: $white
 	margin: 10px 0
 	text-align: center
@@ -12,11 +12,11 @@
 	min-width: 200px
 	&:hover,
 	&.hover-state
-		background-color: darken($heliotrope, 8%)
+		background-color: darken($pink, 8%)
 	&:disabled,
 	&.disabled-state
-		color: $jumbo
-		background-color: $porcelain
+		color: $gray-600
+		background-color: $gray-200
 .button
 	@extend %button
 
@@ -96,4 +96,4 @@
 		height: 24px
 		+min-screen($desctop)
 			&:hover
-				fill: $heliotrope
+				fill: $pink
