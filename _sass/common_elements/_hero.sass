@@ -29,10 +29,26 @@
 		position: relative
 		z-index: 0
 		// margin: 40px 0 0 auto
-		margin: 0 0 0 auto
-		width: 60%
-		padding-top: 60%
-		max-height: 60%
+		// margin: 0 0 0 auto
+		// width: 60%
+		// padding-top: 60%
+		// max-height: 60%
+		&-img
+			max-width: 130%
+			display: inline-block
+			vertical-align: middle
+			margin-top: 60px
+			margin-left: -10%
+			+min-screen($mobile-md)
+				margin-left: 0
+				max-width: 100%
+			+min-screen($tablet)
+				margin-left: -3%
+				max-width: 110%
+			+min-screen($desctop)
+				max-width: 135%
+				margin-top: 47px
+				margin-left: -10%
 		&-inner
 			position: relative
 			left: 0
@@ -83,7 +99,7 @@
 					left: 0
 					width: 100%
 					height: 100%
-					background-image: linear-gradient(to right, $black-300, rgba($black-300, .9), rgba($black-300, .8), rgba($black-300, .7), transparent)
+					background-image: linear-gradient(to right, $black-300, rgba($black-300, .9), rgba($black-300, .8), rgba($black-300, .7), transparent, rgba($black-300, .9) 90%, $black-300)
 			&-1
 				font-size: 1.1vw
 				transform: rotate(10deg)
