@@ -1,13 +1,17 @@
 .hero
 	@extend .full-width
 	@extend .color-invert-block
+	overflow-x: hidden
 	margin-bottom: 64px
-	padding: 52px 0 122px
+	padding: 32px 0 122px
 	+min-screen($tablet)
-		padding: 24px 0 64px
+		padding: 44px 0 64px
 	+min-screen($desctop)
 		height: 100vh
 		max-height: 660px
+	&-info
+		position: relative
+		z-index: 1
 	&-version
 		margin-bottom: 40px
 		font-size: 14px
@@ -19,3 +23,76 @@
 		margin-bottom: 40px
 		p
 			font-size: 16px
+	&_mashine
+		height: 100%
+		width: 100%
+		position: relative
+		z-index: 0
+		// margin: 40px 0 0 auto
+		margin: 0 0 0 auto
+		width: 60%
+		padding-top: 60%
+		max-height: 60%
+		&-inner
+			position: relative
+			left: 0
+			top: 0
+			right: 0
+			bottom: 0
+		&-image
+			position: absolute
+			width: 100%
+			left: 0
+			top: 0
+		&-out_text
+			position: absolute
+			top: 50%
+			left: 50%
+			color: $pink
+			font-weight: 500
+			padding-left: 32%
+			margin-top: -4%
+			transform: rotate(-12deg)
+			transform-origin: 0 50%
+			p
+				margin: 0
+			&-1
+				font-size: 1.4vw
+				padding-left: 32%
+			&-2
+				font-size: 3.1vw
+		&-in_text
+			position: absolute
+			top: 50%
+			right: 50%
+			color: $gray-600
+			padding-right: 54%
+			margin-top: -14%
+			transform: rotate(-12deg)
+			transform-origin: 100% 50%
+			text-align: right
+			p
+				margin: 0
+				transform-origin: 100% 50%
+				position: relative
+				&::before
+					content: ""
+					position: absolute
+					z-index: 1
+					top: 0
+					left: 0
+					width: 100%
+					height: 100%
+					background-image: linear-gradient(to right, $black-300, rgba($black-300, .9), rgba($black-300, .8), rgba($black-300, .7), transparent)
+			&-1
+				font-size: 1.1vw
+				transform: rotate(10deg)
+			&-2
+				font-size: 1.6vw
+				transform: rotate(4deg)
+			&-3
+				font-size: 1.1vw
+				transform: rotate(0deg)
+			&-4
+				font-size: .9vw
+				transform: rotate(-9deg)
