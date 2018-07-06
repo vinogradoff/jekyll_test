@@ -5,5 +5,5 @@ const gulp = require('gulp')
 gulp.task('default', () => {
 	configs.setEnv('development');
 	configs.logEnv();
-	runSequence('server');
+	runSequence(/*'server', */'sprite:svg');
 });
