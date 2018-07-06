@@ -35,14 +35,12 @@ plugins:
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
 exclude:
-  - gulp-tasks
-  - gulpfile.js
-  - package.json
+  - util_node_js
   - Gemfile
   - Gemfile.lock
-  - node_modules
   - README.md
-  - package-lock.json
+  - svg-icons
+  - logo
 #   - vendor/bundle/
 #   - vendor/cache/
 #   - vendor/gems/

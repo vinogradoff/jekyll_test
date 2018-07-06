@@ -31,7 +31,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   Google search results) and in your feed.xml site description.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: "@jselenide"
+twitter_username: "jselenide"
 github_username: "codeborne/selenide"
 
 # Build settings
@@ -45,14 +45,12 @@ plugins:
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
 exclude:
-  - gulp-tasks
-  - gulpfile.js
-  - package.json
+  - util_node_js
   - Gemfile
   - Gemfile.lock
-  - node_modules
-  - package-lock.json
   - README.md
+  - svg-icons
+  - logo
 #   - vendor/bundle/
 #   - vendor/cache/
 #   - vendor/gems/
