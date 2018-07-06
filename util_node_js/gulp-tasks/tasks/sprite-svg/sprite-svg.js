@@ -34,7 +34,7 @@ gulp.task('sprite:svg', () => gulp.src(configs.svgIcons + '*svg')
 				sprite: '../img/sprite.svg',
 				render: {
 					scss: {
-						dest: '../../source/sass/_sprite-svg.scss'
+						dest: '../_sass/_sprite-svg.scss'
 						, template: './gulp-tasks/tasks/sprite-svg/_sprite-svg-template.scss'
 					}
 				}
