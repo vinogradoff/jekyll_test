@@ -1,27 +1,4 @@
----
----
-//Header init
 (($) => {
-	let initHeader = () => {
-		$(window).scroll(function() {
-			let _top = parseInt($(window).height() / 2)
-				, _scroll = parseInt($(window).height() / 3);
-
-			if ($(window).scrollTop() >= _scroll ) {
-				$('#header').addClass('is-scroll');
-			} else {
-				$('#header').removeClass('is-scroll');
-			}
-
-			if ($(window).scrollTop() >= _top) {
-				$('#header').addClass('is-fixed');
-			} else {
-				$('#header').removeClass('is-fixed');
-			}
-		});
-	};
-
-	initHeader();
 
 	//init menu open
 	let $body = $('body')
@@ -36,6 +13,12 @@
 		if( $(event.target).closest('.header').length )
 			return;
 		$body.removeClass(menuShowClass);
+	});
+
+	$body.on('click', '#hero_scroll', function(event) {
+		event.preventDefault();
+		let scrollHeight = $(this).parents('.hero').innerHeight();
+		window.scroll({top: scrollHeight, behavior: 'smooth'});
 	});
 
 })(jQuery);
