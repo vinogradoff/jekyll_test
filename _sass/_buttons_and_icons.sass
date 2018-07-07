@@ -132,6 +132,7 @@
 	border-radius: 100px
 	border: 2px solid $white
 	cursor: pointer
+	transition: border-color 0.3s linear
 	&-wheel
 		margin-top: 1em
 		margin-left: auto
@@ -140,6 +141,7 @@
 		height: 0.75em
 		background-color: $white
 		border-radius: 50%
+		transition: background-color 0.3s linear
 	&-scroll_2
 		opacity: 0
 		margin-left: auto
@@ -170,6 +172,14 @@
 		border-right: 0.35em solid transparent
 		border-top: 0.4em solid $white
 		animation: down3 1s infinite
+	&:hover,
+		border-color: $pink
+	&:hover &-wheel
+			background-color: $pink
+	&:hover	&-scroll,
+	&:hover	&-scroll_2,
+	&:hover	&-scroll_3
+		border-top-color: $pink
 
 @-webkit-keyframes down
 	0%
