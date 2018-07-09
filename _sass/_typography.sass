@@ -35,8 +35,9 @@ h3
 		font-size: 32px
 h4
 	font-size: 24px
-	margin: 1.5em 0 2em
-	font-weight: normal
+	margin: 1em 0
+	line-height: 1.2
+	font-weight: 500
 h5
 	font-size: 24px
 	font-weight: normal
@@ -46,9 +47,12 @@ h6
 
 p
 	font-size: 18px
-	margin: .5em 0
+	margin: 1em 0
 	+min-screen($tablet)
 		font-size: 20px
+
+img
+	max-width: 100%
 
 .yellow-mark
 	display: inline-block
@@ -67,6 +71,9 @@ p
 .color-invert-block
 	background-color: $black-300
 	color: $white
+
+.gray-block
+	background-color: rgba($black-300, .03)
 
 .color-gray
 	color: $gray
@@ -163,6 +170,7 @@ p
 	background-color: $black-300
 	width: 160px
 	height: 160px
+	margin-bottom: 32px
 	img
 		vertical-align: middle
 		max-width: 100%

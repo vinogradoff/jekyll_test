@@ -9,6 +9,17 @@
 		margin-left: calc(-50vw + #{$desctop/2 - 24}px)
 		margin-right: calc(-50vw + #{$desctop/2 - 24}px)
 
+
+
+.vertical-padding
+	padding: 64px 0 96px
+	+min-screen($tablet)
+		padding: 64px 0 140px
+	+min-screen($desctop)
+		padding: 144px 0
+	+min-screen($hdpi)
+		padding: 80px 0
+
 .cta-block
 	background-color: $white-300
 	padding: 56px 0
@@ -46,7 +57,7 @@ body
 	flex: 1
 
 .row +.row
-	margin-top: 48px
+	margin-top: 60px
 //denug begin
 // .hero
 	// .container
@@ -66,6 +77,10 @@ body
 	// 	background-color: rgba($blue-400, .3)
 //denug end
 
+.image-ilustration
+	max-width: 95%
+	display: block
+	margin: 60px auto 60px
 
 +min-screen($desctop)
 	
