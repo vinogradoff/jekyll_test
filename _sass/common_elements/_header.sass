@@ -35,7 +35,7 @@ $header-height: 64px
 		.is-menu-show &
 			transition: height $t-n $tf-def .4s
 			height: calc(100vh - #{$header-height})
-		+min-screen($desctop)
+		+min-screen($tablet)
 			position: static
 			width: auto
 			height: auto
@@ -47,19 +47,21 @@ $header-height: 64px
 			padding: 20px 24px
 			display: inline-block
 			overflow: hidden
-			+min-screen($desctop)
+			+min-screen($tablet)
 				display: block
 				padding: 0
 		&-item
 			padding: 20px 0
 			color: $white
 			display: block
-			+min-screen($desctop)
+			+min-screen($tablet)
 				display: inline-block
 				padding: 0
-		+min-screen($desctop)
+		+min-screen($tablet)
 			&-item + &-item
-				margin-left: 32px
+				margin-left: 20px
+				+min-screen($desctop)
+					margin-left: 32px
 
 		&-link
 			display: inline-block
@@ -71,7 +73,7 @@ $header-height: 64px
 			transition: color $t-n $tf-def
 			// &.active
 
-			+min-screen($desctop)
+			+min-screen($tablet)
 				font-size: 16px
 	&_submenu
 		display: none

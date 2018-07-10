@@ -33,10 +33,15 @@
 	div[class^="col-"]
 		min-height: 108px
 		margin-top: 16px
-		+min-screen($desctop)
+		+min-screen($tablet)
 			margin-top: 0
+			min-height: auto
 	img
 		vertical-align: middle
+		+min-screen($tablet)
+			max-width: 80%
+		+min-screen($desctop)
+			max-width: 90%
 
 body,
 html
@@ -47,6 +52,7 @@ body
 	min-width: 320px
 	min-height: 320px
 	background-color: $white
+	font-size: 16px
 	display: flex
 	flex-direction: column
 	+min-screen($mobile)
