@@ -15,8 +15,10 @@ $wraper-width: $desctop+px;
 // Syntax:
 // name SIZErem,
 $breakpoints:
-	sm $tablet+px 16px,
-	md $desctop+px 16px;
+	sm $mobile+px 16px,
+	md $tablet+px 16px,
+	lg $desctop+px 16px,
+	xl $hdpi+px 16px;
 
 
 //

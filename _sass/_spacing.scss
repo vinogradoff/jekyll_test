@@ -3,10 +3,10 @@
 // Margin and Padding
 $grid-breakpoints: (
   xs: 0,
-  sm: 576px,
-  md: 768px,
-  lg: 992px,
-  xl: 1200px
+  sm: $mobile+px,
+  md: $tablet+px,
+  lg: $desctop+px,
+  xl: $hdpi+px
 ) !default;
 
 
