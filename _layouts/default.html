@@ -1,26 +1,27 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
 
-  {%- include head.html -%}
+	{%- include head.html -%}
 
-  <body>
+	<body>
 
-    {%- include header.html -%}
+		{%- include header.html -%}
 
-    <main class="page-content" aria-label="Content">
-      <div class="container">
-        {{ content }}
-      </div>
-    </main>
+		<main class="page-content" aria-label="Content">
+			<div class="container">
+				{{ content }}
+			</div>
+		</main>
 
-    {%- include footer.html -%}
+		{%- include footer.html -%}
 
-  <script
-      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-      integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
-      crossorigin="anonymous"></script>
-  <script type="text/javascript" src="{{ "/js/script.js" | relative_url }}"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+			integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+			crossorigin="anonymous">
+			</script>
+	<script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+	<script type="text/javascript" src="{{ "/js/script.js" | relative_url }}"></script>
 
-  </body>
+	</body>
 
 </html>

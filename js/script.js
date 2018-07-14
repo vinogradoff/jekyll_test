@@ -1,10 +1,10 @@
 (($) => {
 
-	//init menu open
 	let $body = $('body')
 		, $menuButton = $('.toggle-menu-button')
 		, menuShowClass = 'is-menu-show';
 
+/* init menu open */
 	$menuButton.on('click', function() {
 		$body.toggleClass(menuShowClass);
 	});
@@ -15,10 +15,21 @@
 		$body.removeClass(menuShowClass);
 	});
 
+
+/* Scroll HERO block */
 	$body.on('click', '#hero_scroll', function(event) {
 		event.preventDefault();
 		let scrollHeight = $(this).parents('.hero').innerHeight();
 		window.scroll({top: scrollHeight, behavior: 'smooth'});
+	});
+
+/* scroll revel blocks*/
+	console.log('test');
+
+	window.sr = ScrollReveal();
+	sr.reveal('.bottom-reveal', {
+		viewOffset: { top: 64 },
+		duration: 800
 	});
 
 })(jQuery);
