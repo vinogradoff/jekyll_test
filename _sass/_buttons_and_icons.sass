@@ -1,9 +1,9 @@
 %button
 	border-radius: 8px
 	display: inline-block
-	background-color: $pink
+	background-color: $heliotropepink
 	color: $white
-	margin: 10px 0
+	margin: 1rem 0
 	text-align: center
 	border: none
 	font-size: 16px
@@ -16,15 +16,17 @@
 	+min-screen($desctop)
 		&:hover,
 		&.hover-state
-			background-color: darken($pink, 8%)
+			background-color: darken($heliotropepink, 8%)
 			color: $white
 	&:disabled,
 	&.disabled-state
-		color: $gray-600
-		background-color: $gray-200
+		color: $jumbo
+		background-color: $porcelain
+	& + &
+		margin-left: 1.5rem
 
-%mobile-wide-button,
-%tablet-wide-button
+// %mobile-wide-button,
+// %tablet-wide-button
 
 %button-mobile-wide
 	display: block
@@ -121,7 +123,7 @@
 		height: 24px
 		+min-screen($desctop)
 			&:hover
-				fill: $pink
+				fill: $heliotropepink
 
 
 /*Mouse-icon begin*/
@@ -173,13 +175,13 @@
 		border-top: 0.4em solid $white
 		animation: down3 1s infinite
 	&:hover,
-		border-color: $pink
+		border-color: $heliotropepink
 	&:hover &-wheel
-			background-color: $pink
+			background-color: $heliotropepink
 	&:hover	&-scroll,
 	&:hover	&-scroll_2,
 	&:hover	&-scroll_3
-		border-top-color: $pink
+		border-top-color: $heliotropepink
 
 @-webkit-keyframes down
 	0%

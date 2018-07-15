@@ -1,0 +1,129 @@
+//variables
+
+//Resolution breakpoints
+$hdpi: 1440;
+$desctop: 1100;
+$tablet: 769;
+$mobile: 576;
+
+// Margin and Padding
+$grid-breakpoints: (
+  xs: 0,
+  sm: $mobile+px,
+  md: $tablet+px,
+  lg: $desctop+px,
+  xl: $hdpi+px
+) !default;
+
+
+$font-weight-light: 300 !default;
+$font-weight-normal: 400 !default;
+$font-weight-semibold: 500 !default;
+$font-weight-bold: 600 !default;
+
+
+// Spacings
+$spacer: 1rem !default;
+$spacers: () !default;
+$spacers: map-merge((
+  0: 0,
+  1: ($spacer * .5),
+  2: $spacer,
+  3: ($spacer * 1.5),
+  4: ($spacer * 2),
+  5: ($spacer * 3)
+), $spacers);
+
+
+// Sizes
+$base-padding: 18px;
+
+//font-size
+$fs-xxxl: 48px;
+$fs-xxl: 40px;
+$fs-l: 30px;
+$fs-xxxxm: 24px;
+$fs-xxxm: 22px;
+$fs-xxm: 20px;
+$fs-xm: 18px;
+$fs-m: 16px;
+$fs-s: 14px;
+$fs-ss: 13px;
+$fs-xs: 12px;
+$fs-xxs: 11px;
+$fs-xxxs: 9px;
+
+//Line Height
+$lh-sm: 24px;
+$lh-ss: 16px;
+
+//Animation
+$t-s: .6s;
+$t-n: .3s;
+$t-f: .15s;
+$tf-def: linear;
+$tf-prt: ease;
+
+//Colors
+$baltic-sea: #29282b;
+$black: #000000;
+$bright-gray: #3a3e4e;
+$white: #ffffff;
+$alabaster: #f8f8f8;
+$jumbo: #7c7b7d;
+$gray-chateau: #abb2b8;
+$porcelain: #eef0f2;
+$heliotropepink: #ae8fff;
+$yellow: #fbcb16;
+
+$text-muted: $bright-gray !default;
+
+$colors: () !default;
+$colors: map-merge((
+  "baltic-sea": $baltic-sea,
+  "black": $black,
+  "bright-gray": $bright-gray,
+  "white": $white,
+  "alabaster": $alabaster,
+  "jumbo": $jumbo,
+  "gray-chateau": $gray-chateau,
+  "porcelain": $porcelain,
+  "heliotropepink": $heliotropepink,
+  "yellow": $yellow
+), $colors);
+
+
+$theme-colors: () !default;
+$theme-colors: map-merge((
+  "baltic-sea": $baltic-sea,
+  "black": $black,
+  "bright-gray": $bright-gray,
+  "white": $white,
+  "alabaster": $alabaster,
+  "jumbo": $jumbo,
+  "gray-chateau": $gray-chateau,
+  "porcelain": $porcelain,
+  "heliotropepink": $heliotropepink,
+  "yellow": $yellow
+), $theme-colors);
+// stylelint-enable
+
+
+//colors-styleguide
+.guide_color {
+		margin-bottom: 10px;
+		overflow: hidden;
+		&::before {
+			content: '';
+			width: 50px;
+			height: 50px;
+			background-color: currentColor;
+			border-radius: 9px;
+			border: 2px solid #999;
+			float: left;
+			margin: 0 15px 10px 0;
+		}
+		&-name {
+			color: #000;
+		}
+}
