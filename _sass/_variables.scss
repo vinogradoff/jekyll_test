@@ -68,6 +68,7 @@ $gray-chateau: #abb2b8;
 $porcelain: #eef0f2;
 $heliotropepink: #ae8fff;
 $yellow: #fbcb16;
+$dark: #2b2f3e;
 
 $text-muted: $bright-gray !default;
 
@@ -82,7 +83,8 @@ $colors: map-merge((
   "gray-chateau": $gray-chateau,
   "porcelain": $porcelain,
   "heliotropepink": $heliotropepink,
-  "yellow": $yellow
+  "yellow": $yellow,
+  "dark": $dark
 ), $colors);
 
 
@@ -97,7 +99,8 @@ $theme-colors: map-merge((
   "gray-chateau": $gray-chateau,
   "porcelain": $porcelain,
   "heliotropepink": $heliotropepink,
-  "yellow": $yellow
+  "yellow": $yellow,
+  "dark": $dark
 ), $theme-colors);
 // stylelint-enable
 
