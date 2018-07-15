@@ -2,8 +2,8 @@
 
 //Resolution breakpoints
 $hdpi: 1440;
-$desctop: 1100;
-$tablet: 769;
+$desctop: 1024;
+$tablet: 768;
 $mobile: 576;
 
 // Margin and Padding
@@ -34,28 +34,16 @@ $spacers: map-merge((
   5: ($spacer * 3)
 ), $spacers);
 
+// This variable affects the `.h-*` and `.w-*` classes.
+$sizes: () !default;
+$sizes: map-merge((
+  25: 25%,
+  50: 50%,
+  75: 75%,
+  90: 90%,
+  100: 100%
+), $sizes);
 
-// Sizes
-$base-padding: 18px;
-
-//font-size
-$fs-xxxl: 48px;
-$fs-xxl: 40px;
-$fs-l: 30px;
-$fs-xxxxm: 24px;
-$fs-xxxm: 22px;
-$fs-xxm: 20px;
-$fs-xm: 18px;
-$fs-m: 16px;
-$fs-s: 14px;
-$fs-ss: 13px;
-$fs-xs: 12px;
-$fs-xxs: 11px;
-$fs-xxxs: 9px;
-
-//Line Height
-$lh-sm: 24px;
-$lh-ss: 16px;
 
 //Animation
 $t-s: .6s;

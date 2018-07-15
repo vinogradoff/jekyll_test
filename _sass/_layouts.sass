@@ -22,26 +22,7 @@
 
 .cta-block
 	background-color: $alabaster
-	padding: 56px 0
-	margin-top: 40px
-	h2
-		margin: 0 0 10px
 
-.users-logos
-	padding-bottom: 70px
-	padding-top: 20px
-	div[class^="col-"]
-		min-height: 108px
-		margin-top: 16px
-		+min-screen($tablet)
-			margin-top: 0
-			min-height: auto
-	img
-		vertical-align: middle
-		+min-screen($tablet)
-			max-width: 80%
-		+min-screen($desctop)
-			max-width: 90%
 
 body,
 html
@@ -62,7 +43,7 @@ body
 	flex: 1
 
 .row +.row
-	margin-top: 2rem
+	margin-top: 1rem
 //denug begin
 // .hero
 	// .container
@@ -86,27 +67,6 @@ body
 	max-width: 95%
 	display: block
 	margin: 60px auto 60px
-
-+min-screen($desctop)
-	
-	%extreme-left-col
-		margin-left: $base-padding * -1 !important
-		padding-left: $base-padding * 2 !important
-	%extreme-right-col
-		margin-right: $base-padding * -1 !important
-		padding-right: $base-padding * 2 !important
-
-	%row-extreme
-		margin-left: $base-padding * -2 !important
-		margin-right: $base-padding * -2 !important
-		> *:first-child
-			padding-left: $base-padding * 2 !important
-		> *:last-child
-			padding-right: $base-padding * 2 !important
-
-.row-extreme
-	@extend .row
-	@extend %row-extreme
 
 .container
 	@extend .wrapper
