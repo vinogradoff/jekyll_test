@@ -24,10 +24,6 @@
 	&-header
 		line-height: 1
 		margin-bottom: 16px
-	&-text
-		margin-bottom: 40px
-		p
-			font-size: 16px
 	&_mashine-img
 		max-width: 150%
 		display: inline-block
@@ -42,66 +38,3 @@
 		+min-screen($desctop)
 			max-width: 130%
 			margin-left: -6%
-		&-inner
-			position: relative
-			left: 0
-			top: 0
-			right: 0
-			bottom: 0
-		&-image
-			position: absolute
-			width: 100%
-			left: 0
-			top: 0
-		&-out_text
-			position: absolute
-			top: 50%
-			left: 50%
-			color: $heliotropepink
-			font-weight: 500
-			padding-left: 32%
-			margin-top: -4%
-			transform: rotate(-12deg)
-			transform-origin: 0 50%
-			p
-				margin: 0
-			&-1
-				font-size: 1.4vw
-				padding-left: 32%
-			&-2
-				font-size: 3.1vw
-		&-in_text
-			position: absolute
-			top: 50%
-			right: 50%
-			color: $jumbo
-			padding-right: 54%
-			margin-top: -14%
-			transform: rotate(-12deg)
-			transform-origin: 100% 50%
-			text-align: right
-			p
-				margin: 0
-				transform-origin: 100% 50%
-				position: relative
-				&::before
-					content: ""
-					position: absolute
-					z-index: 1
-					top: 0
-					left: 0
-					width: 100%
-					height: 100%
-					background-image: linear-gradient(to right, $baltic-sea, rgba($baltic-sea, .9), rgba($baltic-sea, .8), rgba($baltic-sea, .7), transparent, rgba($baltic-sea, .9) 90%, $baltic-sea)
-			&-1
-				font-size: 1.1vw
-				transform: rotate(10deg)
-			&-2
-				font-size: 1.6vw
-				transform: rotate(4deg)
-			&-3
-				font-size: 1.1vw
-				transform: rotate(0deg)
-			&-4
-				font-size: .9vw
-				transform: rotate(-9deg)
