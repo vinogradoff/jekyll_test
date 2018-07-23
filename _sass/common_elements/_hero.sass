@@ -17,11 +17,6 @@
 		+min-screen($desctop)
 			display: block
 			color: $white
-	&-info
-		position: relative
-		z-index: 1
-		+max-screen($tablet)
-			max-width: 420px
 	&-version
 		margin-bottom: 40px
 		font-size: 14px
@@ -33,28 +28,20 @@
 		margin-bottom: 40px
 		p
 			font-size: 16px
-	&_mashine
-		height: 100%
-		width: 100%
-		position: relative
-		z-index: 0
-		&-img
-			max-width: 150%
-			display: inline-block
-			vertical-align: middle
-			margin-top: 60px
-			margin-left: -20%
-			+min-screen($mobile)
-				margin-left: -4%
-				max-width: 110%
-			+min-screen($tablet)
-				max-width: 104%
-				margin-top: 50px
-				margin-left: 0
-			+min-screen($desctop)
-				max-width: 130%
-				margin-top: 50px
-				margin-left: -6%
+	&_mashine-img
+		max-width: 150%
+		display: inline-block
+		vertical-align: middle
+		margin-left: -20%
+		+min-screen($mobile)
+			margin-left: -4%
+			max-width: 110%
+		+min-screen($tablet)
+			max-width: 104%
+			margin-left: 0
+		+min-screen($desctop)
+			max-width: 130%
+			margin-left: -6%
 		&-inner
 			position: relative
 			left: 0
