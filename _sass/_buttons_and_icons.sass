@@ -3,7 +3,7 @@
 	display: inline-block
 	background-color: $heliotropepink
 	color: $white
-	margin: 1rem 0
+	margin: .5rem 0
 	text-align: center
 	border: none
 	font-size: 16px
@@ -13,6 +13,8 @@
 	min-width: 200px
 	cursor: pointer
 	text-decoration: none
+	+min-screen($tablet)
+		margin-right: .5rem
 	+min-screen($desctop)
 		&:hover,
 		&.hover-state
@@ -22,12 +24,7 @@
 	&.disabled-state
 		color: $jumbo
 		background-color: $porcelain
-	& + &
-		+min-screen($tablet)
-			margin-left: 1rem
 
-// %mobile-wide-button,
-// %tablet-wide-button
 
 %button-mobile-wide
 	display: block
