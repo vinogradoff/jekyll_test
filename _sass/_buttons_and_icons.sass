@@ -3,7 +3,7 @@
 	display: inline-block
 	background-color: $heliotropepink
 	color: $white
-	margin: .5rem 0
+	margin: .5rem .5rem .5rem 0
 	text-align: center
 	border: none
 	font-size: 16px
@@ -27,17 +27,17 @@
 
 
 %button-mobile-wide
-	display: block
-	min-width: 100%
-	+min-screen($mobile)
-		display: inline-block
-		min-width: 200px
+	// display: block
+	+max-screen($mobile)
+		min-width: 100%
+		// display: inline-block
+		// min-width: 200px
 %button-tablet-wide
-	display: block
-	min-width: 100%
-	+min-screen($desktop)
-		display: inline-block
-		min-width: 200px
+	// display: block
+	+max-screen($desktop)
+		min-width: 100%
+		// display: inline-block
+		// min-width: 200px
 
 
 .button
