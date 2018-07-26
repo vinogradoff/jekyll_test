@@ -25,20 +25,28 @@
 		color: $jumbo
 		background-color: $porcelain
 
+%button-secondary
+	border-radius: 50px
+	background-color: $porcelain
+	color: $dark
+	min-width: 210px
+	+min-screen($desktop)
+		&:hover,
+		&.hover-state
+			background-color: darken($porcelain, 8%)
+			color: $dark
+	&:disabled,
+	&.disabled-state
+		color: $gray-chateau
+		background-color: $alabaster
 
 %button-mobile-wide
-	// display: block
 	+max-screen($mobile)
 		min-width: 100%
-		// display: inline-block
-		// min-width: 200px
+
 %button-tablet-wide
-	// display: block
 	+max-screen($desktop)
 		min-width: 100%
-		// display: inline-block
-		// min-width: 200px
-
 
 .button
 	@extend %button
@@ -46,6 +54,9 @@
 	@extend %button-mobile-wide
 .button-tablet-wide
 	@extend %button-tablet-wide
+.button-secondary
+	@extend %button
+	@extend %button-secondary
 
 .toggle-menu-button
 	width: 28px
@@ -190,43 +201,34 @@
 @-webkit-keyframes down
 	0%
 		opacity: 0
-
 	100%
 		opacity: 1
 		transform: translateY(2.3em)
-
 
 @-webkit-keyframes down2
 	40%
 		opacity: 0
-
 	100%
 		opacity: 0.5
 		transform: translateY(2.3em)
 
-
 @-webkit-keyframes down3
 	60%
 		opacity: 0
-
 	100%
 		opacity: 0.2
 		transform: translateY(2.3em)
 
-
 @keyframes down
 	0%
 		opacity: 0
-
 	100%
 		opacity: 1
 		transform: translateY(2.3em)
 
-
 @keyframes down2
 	40%
 		opacity: 0
-
 	100%
 		opacity: 0.5
 		transform: translateY(2.3em)
@@ -235,7 +237,6 @@
 @keyframes down3
 	60%
 		opacity: 0
-
 	100%
 		opacity: 0.2
 		transform: translateY(2.3em)
