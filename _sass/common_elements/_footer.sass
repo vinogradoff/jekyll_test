@@ -1,8 +1,7 @@
 .footer
-	padding: 65px 0
+	padding: 64px 0
 	&-logo
 		margin-bottom: 30px
-	&-logo
 		max-width: 140px
 		max-height: 40px
 	&-social
@@ -23,17 +22,29 @@
 	&_menu
 		width: 100%
 		&-item
+			align-items: center
+			display: flex
+			border-bottom: 2px solid $alabaster
 			padding-top: 10px
 			padding-bottom: 10px
-			display: block
-			border-bottom: 2px solid $alabaster
+			justify-content: space-between
 			+min-screen($tablet)
+				display: block
 				border-bottom: none
 		&-link
 			font-size: 16px
 			line-height: 28px
 			font-weight: 600
 			text-decoration: none
+			text-transform: uppercase
+			margin-right: 20px
+			flex: 1
+		& .icon
+			padding: 5px
+			width: calc(1rem + 10px)
+			height: calc(1rem + 10px)
+			+min-screen($tablet)
+				display: none
 
 	.footer_submenu
 		display: none
@@ -47,4 +58,3 @@
 			line-height: 1.4
 			font-weight: 500
 			text-decoration: none
-			
