@@ -5,7 +5,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="header-left col-xs-2">
-				<a class="logo" rel="author" href="{{ "/" | absolute_url }}" title="{{ site.title | escape }}">
+				<a class="logo" rel="author" href="{{ "/" | relative_url }}" title="{{ site.title | escape }}">
 					{% include selenide-logo.svg %}
 				</a>
 			</div>
@@ -17,12 +17,13 @@
 					<nav class="header_menu">
 						<ul class="header_menu-list">
 							{%- for path in page_paths -%}
-								{%- assign my_page = site.pages | where: "path", path | first -%}
+								{%- assign page = site.pages | where: "path", path | first -%}
 								
-								{%- if my_page.title and my_page.exclude_from_nav != true -%}
+								{%- if page.title and page.exclude_from_nav != true -%}
 									<li class="header_menu-item">
-									{{my_page.exclude_from_nav}}
-										<a href="{{ my_page.url | absolute_url }}" class="header_menu-link">{{ my_page.title | escape }}</a>
+									{{page.exclude_from_nav}}
+										<a href="{{ page.url | relative_url }}" class="header_menu-link">{{ page.title | escape }}</a>
+										{% comment %}
 										<ul class="header_submenu">
 											<li class="header_submenu-item">
 												<a class="header_submenu-link" href="#">Why Selenise?</a>
@@ -34,6 +35,7 @@
 												<a class="header_submenu-link" href="#">Why Selenise?</a>
 											</li>
 										</ul>
+										{% endcomment %}
 									</li>
 								{%- endif -%}
 							{%- endfor -%}

@@ -1,65 +1,48 @@
+{%- assign default_paths = site.pages | map: "path" -%}
+{%- assign page_paths = site.header_pages | default: default_paths -%}
 <footer class="footer">
 	<div class="container">
-		<div class="row footer-logo">
+		<div class="row">
 			<div class="col-xs-12">
 				<img class="footer-logo" src="{{ "/" | relative_url }}img/selenide_black_logo.svg">
 			</div>
 		</div>
-<!--		
-		<div class="footer-top">
-			<nav class="footer_menu">
-				<ul class="row footer_menu-list">
-					<li class="footer_menu-item col-sm-3 col-xs-12">
-						<a class="footer_menu-link" href="#">PRODUCT</a>
-						<ul class="footer_submenu">
-							<li class="footer_submenu-item">
-								<a class="footer_submenu-link" href="#">Why Selenise?</a></li>
-							<li class="footer_submenu-item">
-								<a class="footer_submenu-link" href="#">Why Selenise?</a></li>
-							<li class="footer_submenu-item">
-								<a class="footer_submenu-link" href="#">Why Selenise?</a></li>
+
+		{% comment %}
+			<div class="footer-top">
+				{%- if page_paths -%}
+					<nav class="footer_menu">
+						<ul class="row footer_menu-list">
+							{%- for path in page_paths -%}
+								{%- assign page = site.pages | where: "path", path | first -%}
+								
+								{%- if page.title and page.exclude_from_nav != true -%}
+									<li class="footer_menu-item col-md-3 col-xs-12">
+									{{page.exclude_from_nav}}
+										<a href="{{ page.url | relative_url }}" class="footer_menu-link">{{ page.title | escape }}</a>
+
+											{% include lib/svg-icon.html name="arrow"%}
+											<ul class="footer_submenu">
+												<li class="footer_submenu-item">
+													<a class="footer_submenu-link" href="#">Why Selenise?</a></li>
+												<li class="footer_submenu-item">
+													<a class="footer_submenu-link" href="#">Why Selenise?</a></li>
+												<li class="footer_submenu-item">
+													<a class="footer_submenu-link" href="#">Why Selenise?</a></li>
+											</ul>
+
+									</li>
+								{%- endif -%}
+							{%- endfor -%}
 						</ul>
-					</li>
-					<li class="footer_menu-item col-sm-3 col-xs-12">
-						<a class="footer_menu-link" href="#">USE CASES</a>
-						<ul class="footer_submenu">
-							<li class="footer_submenu-item">
-								<a class="footer_submenu-link" href="#">Quick Start</a></li>
-							<li class="footer_submenu-item">
-								<a class="footer_submenu-link" href="#">For Professionals</a></li>
-							<li class="footer_submenu-item">
-								<a class="footer_submenu-link" href="#">Contribute to Selenide</a></li>
-						</ul>
-					</li>
-					<li class="footer_menu-item col-sm-3 col-xs-12">
-						<a class="footer_menu-link" href="#">RESOURCES</a>
-						<ul class="footer_submenu">
-							<li class="footer_submenu-item">
-								<a class="footer_submenu-link" href="#">News</a></li>
-							<li class="footer_submenu-item">
-								<a class="footer_submenu-link" href="#">Blog</a></li>
-							<li class="footer_submenu-item">
-								<a class="footer_submenu-link" href="#">Documentation</a></li>
-						</ul>
-					</li>
-					<li class="footer_menu-item col-sm-3 col-xs-12"">
-						<a class="footer_menu-link" href="#">EXTRAS</a>
-						<ul class="footer_submenu">
-							<li class="footer_submenu-item">
-								<a class="footer_submenu-link" href="#">Privacy &amp; Terms</a></li>
-							<li class="footer_submenu-item">
-								<a class="footer_submenu-link" href="#">Contact Us</a></li>
-							<li class="footer_submenu-item">
-								<a class="footer_submenu-link" href="#">Support</a></li>
-						</ul>
-					</li>
-				</ul>
-			</nav>
-		</div>
--->
-		<div class="row footer-bot">
-			<p class="footer-copy col-xs-12 col-sm-6">© 2018 Selenide</p>
-			<div class="footer-social col-xs-12 col-sm-6">
+					</nav>
+				{%- endif -%}
+			</div>
+		{% endcomment %}
+
+		<div class="row">
+			<p class="footer-copy col-xs-12 col-md-6 mb-3 pb-1 mt-0 mb-md-0 ">© 2018 Selenide</p>
+			<div class="footer-social col-xs-12 col-md-6">
 				{%- include social.html -%}
 			</div>
 		</div>
