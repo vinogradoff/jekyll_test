@@ -1,6 +1,7 @@
 <header id="header" class="header" role="banner">
 {%- assign default_paths = site.pages | map: "path" -%}
 {%- assign page_paths = site.header_pages | default: default_paths -%}
+{%- assign lang = site.active_lang -%}
 
 	<div class="container">
 		<div class="row">
@@ -42,6 +43,28 @@
 						</ul>
 					</nav>
 				{%- endif -%}
+				
+				<span class="lang_switch">
+					{% if site.default_lang == site.active_lang %}
+					<img class="flag-icon" src="{{ "/" | relative_url }}img/flag-{{ site.default_lang }}.svg">
+					{% else %}
+					<img class="flag-icon" src="{{ "/" | relative_url }}img/flag-{{ site.active_lang }}.svg">
+					{% endif%}
+
+					{% for lang in site.languages %}
+					<a {% if lang == site.active_lang %} class="lang_switch-current" {% endif %} 
+					href="{% if lang == site.default_lang %} 
+					{{site.url}}
+					{% else %} 
+					{{site.url}}/{{ lang }}
+					{% endif %}" style="text-decoration: none;" >
+					{{lang}}
+					</a>
+					{% endfor %}
+
+					{% include lib/svg-icon.html name="arrow-white" %}
+				</span>
+
 				<button class="toggle-menu-button">
 					<span></span>
 				</button>
