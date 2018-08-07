@@ -6,7 +6,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="header-left col-xs-2">
-				<a class="logo" rel="author" href="{{ "/" | relative_url }}" title="{{ site.title | escape }}">
+				<a class="logo" rel="author" href="{{ "/" | absolute_url }}" title="{{ site.title | escape }}">
 					{% include selenide-logo.svg %}
 				</a>
 			</div>
@@ -18,12 +18,12 @@
 					<nav class="header_menu">
 						<ul class="header_menu-list">
 							{%- for path in page_paths -%}
-								{%- assign page = site.pages | where: "path", path | first -%}
-								
-								{%- if page.title and page.exclude_from_nav != true -%}
+								{%- assign menu_item = site.pages | where: "path", path | first -%}
+
+								{%- if menu_item.title and menu_item.exclude_from_nav != true -%}
+
 									<li class="header_menu-item">
-									{{page.exclude_from_nav}}
-										<a href="{{ page.url | relative_url }}" class="header_menu-link">{{ page.title | escape }}</a>
+										<a href="{{ menu_item.url | absolute_url }}" class="header_menu-link">{{ menu_item.title | escape }}</a>
 										{% comment %}
 										<ul class="header_submenu">
 											<li class="header_submenu-item">
@@ -46,19 +46,21 @@
 				
 				<span class="lang_switch">
 					{% if site.default_lang == site.active_lang %}
-					<img class="flag-icon" src="{{ "/" | relative_url }}img/flag-{{ site.default_lang }}.svg">
+					<img class="flag-icon" src="{{ "/" | absolute_url }}img/flag-{{ site.default_lang }}.svg">
 					{% else %}
-					<img class="flag-icon" src="{{ "/" | relative_url }}img/flag-{{ site.active_lang }}.svg">
+					<img class="flag-icon" src="{{ "/" | absolute_url }}img/flag-{{ site.active_lang }}.svg">
 					{% endif%}
 
 					{% for lang in site.languages %}
 					<a {% if lang == site.active_lang %} class="lang_switch-current" {% endif %} 
-					href="{% if lang == site.default_lang %} 
-					{{site.url}}
-					{% else %} 
-					{{site.url}}/{{ lang }}
-					{% endif %}" style="text-decoration: none;" >
-					{{lang}}
+						href="
+							{% if lang == site.default_lang %} 
+								{{site.url}}{{page.url}}
+							{% else %} 
+								{{site.url}}/{{ lang }}{{page.url}}
+							{% endif %}"
+						>
+						{{lang}}
 					</a>
 					{% endfor %}
 
