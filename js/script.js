@@ -32,16 +32,4 @@
 		duration: 800
 	});
 
-	sr.reveal('.left-reveal', {
-		origin: 'left',
-		viewOffset: { top: 64 },
-		duration: 800
-	});
-
-	sr.reveal('.right-reveal', {
-		origin: 'right',
-		viewOffset: { top: 64 },
-		duration: 800
-	});
-
 })(jQuery);
