@@ -1,11 +1,12 @@
 <header id="header" class="header" role="banner">
 {%- assign default_paths = site.pages | map: "path" -%}
 {%- assign page_paths = site.header_pages | default: default_paths -%}
+{%- assign lang = site.active_lang -%}
 
 	<div class="container">
 		<div class="row">
 			<div class="header-left col-xs-2">
-				<a class="logo" rel="author" href="{{ "/" | relative_url }}" title="{{ site.title | escape }}">
+				<a class="logo" rel="author" href="{{ '/' | absolute_url }}" title="{{ site.title | escape }}">
 					{% include selenide-logo.svg %}
 				</a>
 			</div>
@@ -17,12 +18,12 @@
 					<nav class="header_menu">
 						<ul class="header_menu-list">
 							{%- for path in page_paths -%}
-								{%- assign page = site.pages | where: "path", path | first -%}
-								
-								{%- if page.title and page.exclude_from_nav != true -%}
+								{%- assign menu_item = site.pages | where: "path", path | first -%}
+
+								{%- if menu_item.title and menu_item.exclude_from_nav != true -%}
+
 									<li class="header_menu-item">
-									{{page.exclude_from_nav}}
-										<a href="{{ page.url | relative_url }}" class="header_menu-link">{{ page.title | escape }}</a>
+										<a href="{{ menu_item.url | absolute_url }}" class="header_menu-link {% if page.url == menu_item.url %} active{% endif %}">{{ menu_item.title | escape }}</a>
 										{% comment %}
 										<ul class="header_submenu">
 											<li class="header_submenu-item">
@@ -42,6 +43,34 @@
 						</ul>
 					</nav>
 				{%- endif -%}
+
+				<div class="lang_switch">
+					<div class="lang_switch-current">
+						<img class="lang_switch-image" src="{{ '/' | absolute_url }}img/flag-{{ site.active_lang }}.svg" title="{{ site.active_lang }}" alt="{{ site.active_lang }}">
+						<span class="lang_switch-name">
+							{{ site.active_lang }}
+						</span>
+						{% include lib/svg-icon.html name="arrow" mod="lang_switch-arrow" %}
+					</div>
+					<div class="lang_switch-dropdown">
+						{% for lang in site.languages %}
+							{%- if lang != site.active_lang -%}
+								<a class="lang_switch-dropdown-item" href="{% if lang == site.default_lang %} 
+															{{site.url}}{{page.url}}
+														{% else %} 
+																{{site.url}}/{{ lang }}{{page.url}}
+														{% endif %}"">
+									<img class="lang_switch-image" src="{{ "/" | absolute_url }}img/flag-{{ lang }}.svg" title="{{lang}}" alt="{{lang}}">
+									<span class="lang_switch-name">
+										{{lang}}
+									</span>
+								</a>
+							{%- endif -%}
+						{% endfor %}
+					</div>
+				</div>
+
+
 				<button class="toggle-menu-button">
 					<span></span>
 				</button>
