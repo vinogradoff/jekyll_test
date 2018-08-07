@@ -85,11 +85,28 @@ $header-height: 64px
 
 .lang_switch
 	position: relative
-	.flag-icon
-		
+	&-current
+		display: flex
+		flex-direction: row
+		align-items: center
+		justify-content: center
+		cursor: pointer
+	&-arrow
+		fill: $white
+		font-size: 12px
+		width: 25px
+		height: 25px
+		// margin-left: 5px
+		padding: 5px
+	&-name
+		color: $white
+		margin: 0 5px
 	&-current
 		font-weight: bold
-		color: #fff
-	span
-		margin-top: 4px
+		color: $white
+	&-dropdown
+		position: absolute
+		top: 100%
+		display: none
+		
 

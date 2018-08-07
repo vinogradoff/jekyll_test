@@ -2,6 +2,7 @@
 
 	let $body = $('body')
 		, $menuButton = $('.toggle-menu-button')
+		, $langSwich = $('.lang_switch')
 		, menuShowClass = 'is-menu-show';
 
 /* init menu open */
@@ -13,6 +14,19 @@
 		if( $(event.target).closest('.header').length )
 			return;
 		$body.removeClass(menuShowClass);
+	});
+
+/* init lang_switch open */
+	$langSwich.on('click', function() {
+		$(this).find('.lang_switch-dropdown').slideToggle()
+		.end().toggleClass('is-open');
+	});
+
+	$(document).click( function(event){
+		if( $(event.target).closest('.lang_switch').length )
+			return;
+		$langSwich.find('.lang_switch-dropdown').slideUp()
+		.end().removeClass('is-open');
 	});
 
 
