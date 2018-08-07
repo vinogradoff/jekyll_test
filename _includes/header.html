@@ -6,7 +6,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="header-left col-xs-2">
-				<a class="logo" rel="author" href="{{ "/" | absolute_url }}" title="{{ site.title | escape }}">
+				<a class="logo" rel="author" href="{{ '/' | absolute_url }}" title="{{ site.title | escape }}">
 					{% include selenide-logo.svg %}
 				</a>
 			</div>
@@ -23,7 +23,7 @@
 								{%- if menu_item.title and menu_item.exclude_from_nav != true -%}
 
 									<li class="header_menu-item">
-										<a href="{{ menu_item.url | absolute_url }}" class="header_menu-link">{{ menu_item.title | escape }}</a>
+										<a href="{{ menu_item.url | absolute_url }}" class="header_menu-link {% if page.url == menu_item.url %} active{% endif %}">{{ menu_item.title | escape }}</a>
 										{% comment %}
 										<ul class="header_submenu">
 											<li class="header_submenu-item">
@@ -43,29 +43,25 @@
 						</ul>
 					</nav>
 				{%- endif -%}
-				
-				<span class="lang_switch">
-					{% if site.default_lang == site.active_lang %}
-					<img class="flag-icon" src="{{ "/" | absolute_url }}img/flag-{{ site.default_lang }}.svg">
-					{% else %}
-					<img class="flag-icon" src="{{ "/" | absolute_url }}img/flag-{{ site.active_lang }}.svg">
-					{% endif%}
 
-					{% for lang in site.languages %}
-					<a {% if lang == site.active_lang %} class="lang_switch-current" {% endif %} 
-						href="
-							{% if lang == site.default_lang %} 
-								{{site.url}}{{page.url}}
-							{% else %} 
-								{{site.url}}/{{ lang }}{{page.url}}
-							{% endif %}"
-						>
-						{{lang}}
-					</a>
-					{% endfor %}
+				<div class="lang_switch">
+					<div class="lang_switch-current">
+						<img class="flag-icon" src="{{ '/' | absolute_url }}img/flag-{{ site.active_lang }}.svg" title="{{ site.active_lang }}" alt="{{ site.active_lang }}">
+						{{ site.active_lang }}
+						{% include lib/svg-icon.html name="arrow" mod="lang_switch-arrow" %}
+					</div>
+				</div>
+				{% comment %}
 
-					{% include lib/svg-icon.html name="arrow-white" %}
-				</span>
+					<div class="lang_switch-dropdown">
+						{% for lang in site.languages %}
+							<a class="lang_switch-dropdown-item" href="{{site.url}}{{page.url}}">
+								<img class="flag-icon" src="{{ "/" | absolute_url }}img/flag-{{ lang }}.svg" title="{{lang}}" alt="{{lang}}">
+								{{lang}}
+							</a>
+						{% endfor %}
+					</div>
+				{% endcomment %}
 
 				<button class="toggle-menu-button">
 					<span></span>
