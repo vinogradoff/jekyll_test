@@ -72,25 +72,39 @@ $header-height: 64px
 			letter-spacing: 1.4px
 			transition: color $t-n $tf-def
 			padding: 3px
-			border-bottom: 2px solid transparent
+			border-bottom: 1px solid transparent
 			&:hover
 				color: $heliotropepink
 			&.active
 				color: $heliotropepink
 				border-color: currentColor
-
-
 			+min-screen($tablet)
 				font-size: 16px
 
-.lang_switch
+.lang_wrapper
 	position: relative
+	margin: 15px 24px 0 24px
+	width: 40px
+	height: 100%
+	+min-screen($tablet)
+		margin-right: 0
+		
+//language switch styles
+.lang_switch
+	position: absolute
+	background-color: #3a3e4e
+	border-radius: 4px
+	&-image		
+		padding: 3px 8px
 	&-current
+		// position: relative
 		display: flex
 		flex-direction: row
 		align-items: center
 		justify-content: center
 		cursor: pointer
+		font-weight: bold
+		color: $white			
 	&-arrow
 		fill: $white
 		font-size: 12px
@@ -101,12 +115,12 @@ $header-height: 64px
 	&-name
 		color: $white
 		margin: 0 5px
-	&-current
-		font-weight: bold
-		color: $white
+		text-transform: capitalize
 	&-dropdown
-		position: absolute
 		top: 100%
 		display: none
-		
-
+		& .lang_switch-image
+				padding: 0 8px 0
+		& .lang_switch-image:hover
+				background-color: $dark
+				

@@ -1357,13 +1357,17 @@ img {
 
 .icon-arrow {
   font-size: 51.2rem;
-  width: 16em; }
+  width: 1em; }
 
 .icon-facebook {
   font-size: 2.4rem;
   width: 1em; }
 
 .icon-github {
+  font-size: 2.4rem;
+  width: 1em; }
+
+.icon-icon-arrow {
   font-size: 2.4rem;
   width: 1em; }
 
@@ -3605,7 +3609,7 @@ button.bg-dark:focus {
       letter-spacing: 1.4px;
       transition: color 0.3s linear;
       padding: 3px;
-      border-bottom: 2px solid transparent; }
+      border-bottom: 1px solid transparent; }
       .header_menu-link:hover {
         color: #ae8fff; }
       .header_menu-link.active {
@@ -3615,14 +3619,29 @@ button.bg-dark:focus {
         .header_menu-link {
           font-size: 16px; } }
 
+.lang_wrapper {
+  position: relative;
+  margin: 15px 24px 0 24px;
+  width: 40px;
+  height: 100%; }
+  @media screen and (min-width: 768px) {
+    .lang_wrapper {
+      margin-right: 0; } }
+
 .lang_switch {
-  position: relative; }
+  position: absolute;
+  background-color: #3a3e4e;
+  border-radius: 4px; }
+  .lang_switch-image {
+    padding: 3px 8px; }
   .lang_switch-current {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    cursor: pointer; }
+    cursor: pointer;
+    font-weight: bold;
+    color: #ffffff; }
   .lang_switch-arrow {
     fill: #ffffff;
     font-size: 12px;
@@ -3631,14 +3650,15 @@ button.bg-dark:focus {
     padding: 5px; }
   .lang_switch-name {
     color: #ffffff;
-    margin: 0 5px; }
-  .lang_switch-current {
-    font-weight: bold;
-    color: #ffffff; }
+    margin: 0 5px;
+    text-transform: capitalize; }
   .lang_switch-dropdown {
-    position: absolute;
     top: 100%;
     display: none; }
+    .lang_switch-dropdown .lang_switch-image {
+      padding: 0 8px 0; }
+    .lang_switch-dropdown .lang_switch-image:hover {
+      background-color: #2b2f3e; }
 
 .hero {
   background-color: #29282b;
@@ -3646,10 +3666,10 @@ button.bg-dark:focus {
   position: relative;
   overflow-x: hidden;
   margin-bottom: 2rem;
-  padding: 2rem 0 3rem; }
-  @media screen and (min-width: 768px) {
-    .hero {
-      padding: 3rem 0 4rem; } }
+  padding: 2rem 0 3rem;
+  height: 35rem; }
+  .hero .container, .hero .row {
+    height: 100%; }
   .hero-scroll {
     text-align: center;
     display: none;
@@ -3667,20 +3687,59 @@ button.bg-dark:focus {
   .hero-header {
     line-height: 1;
     margin-bottom: 16px; }
-  .hero_mashine-img {
+  .hero .button-wrapper {
+    display: flex;
+    margin-top: 3rem;
+    flex-direction: column; }
+    @media screen and (min-width: 768px) {
+      .hero .button-wrapper {
+        flex-direction: row; } }
+  .hero-button {
+    display: flex;
+    width: 100%;
+    position: relative;
+    border: 2px solid #3a3e4e;
+    border-radius: 20px;
+    padding: 4rem 3rem 4rem;
+    text-decoration: none;
+    color: #ffffff !important;
+    margin-top: 2rem; }
+    @media screen and (min-width: 768px) {
+      .hero-button {
+        margin-top: 0; } }
+    .hero-button:hover {
+      background-color: #3a3e4e; }
+    .hero-button-icon {
+      position: absolute;
+      top: 1.7rem; }
+    .hero-button-title {
+      margin-left: 6rem;
+      position: absolute;
+      top: 1.4rem;
+      font-size: 21px; }
+    .hero-button-view {
+      text-transform: uppercase;
+      position: absolute;
+      margin: 1.8rem 0 0 6.5rem;
+      font-size: 14px;
+      color: #abb2b8; }
+  @media screen and (min-width: 768px) {
+    .hero-button + .hero-button {
+      margin-left: 4%; } }
+  .hero_machine-img {
     max-width: 150%;
     display: inline-block;
     vertical-align: middle;
     margin-left: -20%; }
     @media screen and (min-width: 576px) {
-      .hero_mashine-img {
+      .hero_machine-img {
         margin-left: -4%;
         max-width: 110%; } }
     @media screen and (min-width: 768px) {
-      .hero_mashine-img {
+      .hero_machine-img {
         max-width: 104%;
         margin-left: 0; } }
     @media screen and (min-width: 1024px) {
-      .hero_mashine-img {
+      .hero_machine-img {
         max-width: 130%;
         margin-left: -6%; } }

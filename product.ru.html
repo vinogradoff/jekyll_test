@@ -1,24 +1,32 @@
 ---
 layout: default
 title: Продукт
-permalink: /product/
+permalink: /ru/product/
 lang: ru
 ---
 
 <div class="hero">
 	<div class="container">
 		<div class="row">
-			<div class="hero-info col-md-7">
+			<div class="hero-info col-md-12">
 				<h1 class="hero-header">Selenide по русски</h1>
-				<p class="text-gray-chateau small">
+				<p class="text-gray-chateau small col-md-7">
 					Selenide leverages Selenium API to let you just focus on test logic and not bother with technical details.
 				</p>
-				<a href="#" class="button button-mobile-wide">
-					Features for Test Writing
-				</a>
-				<a href="#" class="button button-mobile-wide">
-					Features for Test Reporting and Debugging
-				</a>
+				<div class="button-wrapper">
+					<a href="#" class="hero-button">
+						<img class="hero-button-icon" src="{{ '/' | absolute_url }}img/group.svg" alt="selenide image}">
+						<span class="hero-button-title col-xs-6">Features for Test Writing</span>
+						<span class="hero-button-view">View </span> 
+						{% comment %}{% include lib/svg-icon.html name="icon-arrow"%}{% endcomment %}
+					</a>
+					<a href="#" class="hero-button">
+						<img class="hero-button-icon" src="{{ '/' | absolute_url }}img/group.svg" alt="selenide image}">
+						<span class="hero-button-title col-xs-8">Features for Test Reporting and Debugging</span>
+						<span class="hero-button-view">View </span> 
+						{% comment %}{% include lib/svg-icon.html name="icon-arrow"%}{% endcomment %}
+					</a>
+				</div>
 			</div>
 		</div>
 	</div>

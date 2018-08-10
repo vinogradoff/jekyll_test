@@ -1,7 +1,7 @@
 <header id="header" class="header" role="banner">
 {%- assign default_paths = site.pages | map: "path" -%}
 {%- assign page_paths = site.header_pages | default: default_paths -%}
-{%- assign lang = site.active_lang -%}
+{%- assign lang = page.lang | default: site.default_lang -%}
 
 	<div class="container">
 		<div class="row">
@@ -20,7 +20,7 @@
 							{%- for path in page_paths -%}
 								{%- assign menu_item = site.pages | where: "path", path | first -%}
 
-								{%- if menu_item.title and menu_item.exclude_from_nav != true -%}
+								{%- if menu_item.title and menu_item.exclude_from_nav != true and menu_item.lang == lang -%}
 
 									<li class="header_menu-item">
 										<a href="{{ menu_item.url | absolute_url }}" class="header_menu-link {% if page.url == menu_item.url %} active{% endif %}">{{ menu_item.title | escape }}</a>
@@ -44,29 +44,36 @@
 					</nav>
 				{%- endif -%}
 
-				<div class="lang_switch">
-					<div class="lang_switch-current">
-						<img class="lang_switch-image" src="{{ '/' | absolute_url }}img/flag-{{ site.active_lang }}.svg" title="{{ site.active_lang }}" alt="{{ site.active_lang }}">
-						<span class="lang_switch-name">
-							{{ site.active_lang }}
-						</span>
-						{% include lib/svg-icon.html name="arrow" mod="lang_switch-arrow" %}
-					</div>
-					<div class="lang_switch-dropdown">
-						{% for lang in site.languages %}
-							{%- if lang != site.active_lang -%}
-								<a class="lang_switch-dropdown-item" href="{% if lang == site.default_lang %} 
-															{{site.url}}{{page.url}}
-														{% else %} 
-																{{site.url}}/{{ lang }}{{page.url}}
-														{% endif %}"">
-									<img class="lang_switch-image" src="{{ "/" | absolute_url }}img/flag-{{ lang }}.svg" title="{{lang}}" alt="{{lang}}">
-									<span class="lang_switch-name">
-										{{lang}}
-									</span>
-								</a>
-							{%- endif -%}
-						{% endfor %}
+				<div class="lang_wrapper">
+					<div class="lang_switch">
+						<div class="lang_switch-current">
+							<img class="lang_switch-image" src="{{ '/' | absolute_url }}img/flag-{{ lang }}.svg" title="{{ lang }}" alt="{{ lang }}">
+							{% comment %}
+							<span class="lang_switch-name">
+								{{ lang }}
+							</span>
+							{% include lib/svg-icon.html name="arrow" mod="lang_switch-arrow" %}
+							{% endcomment %}
+						</div>
+						<div class="lang_switch-dropdown">
+							{% for lang_item in site.languages %}
+								{%- if lang_item != lang -%}
+									<a class="lang_switch-dropdown-item" href="{% if lang == site.default_lang %} 
+																{{site.url}}{{page.url}}
+															{% else %} 
+																	{{site.url}}/{{ lang }}{{page.url}}
+															{% endif %}"">
+
+										<img class="lang_switch-image" src="{{ "/" | absolute_url }}img/flag-{{ lang_item }}.svg" title="{{lang_item}}" alt="{{lang_item}}">
+										{% comment %}
+										<span class="lang_switch-name">
+											{{lang_item}}
+										</span>
+										{% endcomment %}
+									</a>
+								{%- endif -%}
+							{% endfor %}
+						</div>
 					</div>
 				</div>
 
@@ -79,3 +86,27 @@
 		</div>
 	</div>
 </header>
+{% comment %}
+
+<br>
+<br>
+<br>
+<h1>{{page.lang}}</h1>
+
+
+{%- for path in page_paths -%}
+	{%- assign menu_item = site.pages | where: "path", path | first -%}
+
+	{%- if menu_item.title and menu_item.exclude_from_nav != true -%}
+
+
+		{%- if menu_item.lang and menu_item.lang == page.lang -%}
+
+			<p>
+				{{ menu_item.url | absolute_url }} - {{ menu_item.title | escape }}
+			</p>
+		{%- endif -%}
+
+	{%- endif -%}
+{%- endfor -%}
+{% endcomment %}

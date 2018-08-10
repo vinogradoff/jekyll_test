@@ -1,8 +1,8 @@
 ---
 layout: page
 title: Быстрый старт
-permalink: /quick-start/
+permalink: /ru/quick-start/
 lang: ru
 ---
 
-<h1>asdas</h1>
+<h1>{{title}}</h1>

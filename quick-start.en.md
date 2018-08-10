@@ -5,4 +5,4 @@ permalink: /quick-start/
 lang: en
 ---
 
-<h1>asdas</h1>
+<h1>{{title}}</h1>

@@ -1,8 +1,8 @@
 ---
 layout: page
-title: Developer Guide 
+title: Developer Guide
 permalink: /developer-guide/
 lang: en
 ---
 
-<h1>asdas</h1>
+<h1>{{title}}</h1>

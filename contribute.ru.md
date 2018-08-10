@@ -1,8 +1,8 @@
 ---
 layout: page
-title: Поддержка 
-permalink: /contribute/
+title: Поддержка
+permalink: /ru/contribute/
 lang: ru
 ---
 
-<h1>asdas</h1>
+<h1>{{title}}</h1>
