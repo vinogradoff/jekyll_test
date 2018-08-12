@@ -58,6 +58,46 @@
 	@extend %button
 	@extend %button-secondary
 
+.button_jumdotron
+	display: flex
+	flex-direction: row
+	border-radius: 1.25em
+	border: solid 1px $jumbo
+	padding: 1.5em
+	transition: all .3s ease
+	cursor: pointer
+	text-decoration: none
+	color: $white
+	font-weight: 500
+	margin-top: 1.5em
+	+min-screen($tablet)
+		padding: 2.5em
+	+min-screen($desktop)
+		&:hover,
+		&.hover-state
+			border-color: rgba($jumbo, .1)
+			background-color: rgba($jumbo, .1)
+			color: $white
+	&-icon
+		vertical-align: top
+		max-width: 3.5em
+		flex: 1
+		user-select: none
+		margin-right: 1em
+		+min-screen($tablet)
+			margin-right: 1.5em
+		+min-screen($desktop)
+			max-width: 5em
+	&-header
+		font-size: 1.25em
+	&-view
+		color: $gray-chateau
+		display: block
+		position: relative
+		margin-top: .8em
+		font-weight: 500
+		font-size: 1em
+
 .toggle-menu-button
 	width: 28px
 	height: 28px
