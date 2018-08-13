@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+    <title>FA4863C1-8EC1-4538-8191-A27366AE802A</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <path d="M8.21638838,4.30330086 C8.62441421,3.89889971 9.28595479,3.89889971 9.69398063,4.30330086 C10.1020065,4.707702 10.1020065,5.36336581 9.69398063,5.76776695 L6.73879613,8.69669914 C6.33077029,9.10110029 5.66922971,9.10110029 5.26120387,8.69669914 L2.30601937,5.76776695 C1.89799354,5.36336581 1.89799354,4.707702 2.30601937,4.30330086 C2.71404521,3.89889971 3.37558579,3.89889971 3.78361162,4.30330086 L6,6.5 L8.21638838,4.30330086 Z" id="path-1"></path>
+        <rect id="path-3" x="0" y="0" width="15" height="2" rx="1"></rect>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="a/icon_arrow">
+            <rect id="Rectangle-2" fill="#D8D8D8" opacity="0" x="0" y="0" width="24" height="24"></rect>
+            <g transform="translate(6.000000, 12.000000) rotate(-270.000000) translate(-6.000000, -12.000000) translate(0.000000, 6.000000)">
+                <rect id="Rectangle" fill="#D8D8D8" fill-rule="evenodd" opacity="0" x="0" y="0" width="12" height="12"></rect>
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="Path-2-Copy" fill="#29282B" fill-rule="nonzero" xlink:href="#path-1"></use>
+                <g id="color/porcelain" mask="url(#mask-2)" fill="#EEF0F2" fill-rule="evenodd">
+                    <rect x="0" y="0" width="12" height="12"></rect>
+                </g>
+            </g>
+            <g id="color/porcelain" transform="translate(5.000000, 11.000000)">
+                <mask id="mask-4" fill="white">
+                    <use xlink:href="#path-3"></use>
+                </mask>
+                <use id="Mask" fill="#AE8FFF" xlink:href="#path-3"></use>
+                <g mask="url(#mask-4)" fill="#EEF0F2">
+                    <g transform="translate(-2.000000, -7.000000)">
+                        <rect x="0" y="0" width="18" height="18"></rect>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

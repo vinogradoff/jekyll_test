@@ -61,12 +61,16 @@
 						</div>
 						<div class="lang_switch-dropdown">
 							{% for lang_item in site.languages %}
+								{%- assign lang_paht = lang | prepend: "/" -%}
+
 								{%- if lang_item != lang -%}
-									<a class="lang_switch-dropdown-item" href="{% if lang == site.default_lang %} 
-																{{site.url}}{{page.url}}
-															{% else %} 
-																	{{site.url}}/{{ lang }}{{page.url}}
-															{% endif %}">
+									<a class="lang_switch-dropdown-item" href="
+										{% if lang_item == site.default_lang %}
+											{{site.url}}{{ page.url | replace: lang_paht, '' }}
+										{% else %}
+											{{site.url}}/{{ lang_item }}{{ page.url | replace: lang_paht, '' }}
+										{% endif %}
+										">
 
 										<img class="lang_switch-image" src="{{ "/" | absolute_url }}img/flag-{{ lang_item }}.svg" title="{{lang_item}}" alt="{{lang_item}}">
 										{% comment %}
@@ -81,36 +85,11 @@
 					</div>
 				</div>
 
-
 				<button class="toggle-menu-button">
 					<span></span>
 				</button>
 			</div>
-			
+
 		</div>
 	</div>
 </header>
-{% comment %}
-
-<br>
-<br>
-<br>
-<h1>{{page.lang}}</h1>
-
-
-{%- for path in page_paths -%}
-	{%- assign menu_item = site.pages | where: "path", path | first -%}
-
-	{%- if menu_item.title and menu_item.exclude_from_nav != true -%}
-
-
-		{%- if menu_item.lang and menu_item.lang == page.lang -%}
-
-			<p>
-				{{ menu_item.url | absolute_url }} - {{ menu_item.title | escape }}
-			</p>
-		{%- endif -%}
-
-	{%- endif -%}
-{%- endfor -%}
-{% endcomment %}
