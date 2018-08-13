@@ -1,15 +1,13 @@
 <header id="header" class="header" role="banner">
 {%- assign default_paths = site.pages | sort: "menu_order" | map: "path"-%}
 
-{%- assign lang = page.lang | default: site.default_lang -%}
-{{ site.header_pages}}
 	<div class="container">
 		<div class="row">
 			<div class="header-left col-xs-2">
-				<a class="logo" rel="author" href="{% if lang == site.default_lang %} 
+				<a class="logo" rel="author" href="{% if page.lang == site.default_lang %} 
 											{{site.url | absolute_url }}
 										{% else %} 
-												{{site.url | absolute_url }}/{{ lang }}
+												{{site.url | absolute_url }}/{{ page.lang }}
 										{% endif %}">
 					{% include selenide-logo.svg %}
 				</a>
@@ -24,7 +22,7 @@
 							{%- for path in default_paths -%}
 								{%- assign menu_item = site.pages | where: "path", path | first -%}
 
-								{%- if menu_item.title and menu_item.exclude_from_nav != true and menu_item.lang == lang -%}
+								{%- if menu_item.title and menu_item.exclude_from_nav != true and menu_item.lang == page.lang -%}
 
 									<li class="header_menu-item">
 										<a href="{{ menu_item.url | absolute_url }}" class="header_menu-link {% if page.url == menu_item.url %} active{% endif %}">{{ menu_item.title | escape }}</a>
@@ -51,19 +49,19 @@
 				<div class="lang_wrapper">
 					<div class="lang_switch">
 						<div class="lang_switch-current">
-							<img class="lang_switch-image" src="{{ '/' | absolute_url }}img/flag-{{ lang }}.svg" title="{{ lang }}" alt="{{ lang }}">
+							<img class="lang_switch-image" src="{{ '/' | absolute_url }}img/flag-{{ page.lang }}.svg" title="{{ page.lang }}" alt="{{ page.lang }}">
 							{% comment %}
 							<span class="lang_switch-name">
-								{{ lang }}
+								{{ page.lang }}
 							</span>
 							{% include lib/svg-icon.html name="arrow" mod="lang_switch-arrow" %}
 							{% endcomment %}
 						</div>
 						<div class="lang_switch-dropdown">
 							{% for lang_item in site.languages %}
-								{%- assign lang_paht = lang | prepend: "/" -%}
+								{%- assign lang_paht = page.lang | prepend: "/" -%}
 
-								{%- if lang_item != lang -%}
+								{%- if lang_item != page.lang -%}
 									<a class="lang_switch-dropdown-item" href="
 										{% if lang_item == site.default_lang %}
 											{{site.url | absolute_url }}{{ page.url | replace: lang_paht, '' }}

@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Документция
+title: Документация
 permalink: /ru/developer-guide/
 lang: ru
 menu_order: 3

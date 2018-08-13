@@ -39,6 +39,7 @@ defaults:
       type: "pages"
     values:
       menu_order: 100
+      lang: 'en'
 
 languages: ["en", "ru"]
 default_lang: "en"
