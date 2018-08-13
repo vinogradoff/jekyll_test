@@ -1,8 +1,8 @@
 <header id="header" class="header" role="banner">
-{%- assign default_paths = site.pages | map: "path" -%}
-{%- assign page_paths = site.header_pages | default: default_paths -%}
-{%- assign lang = page.lang | default: site.default_lang -%}
+{%- assign default_paths = site.pages | sort: "menu_order" | map: "path"-%}
 
+{%- assign lang = page.lang | default: site.default_lang -%}
+{{ site.header_pages}}
 	<div class="container">
 		<div class="row">
 			<div class="header-left col-xs-2">
@@ -18,10 +18,10 @@
 			<div class="header-right col-xs-10">
 
 
-				{%- if page_paths -%}
+				{%- if default_paths -%}
 					<nav class="header_menu">
 						<ul class="header_menu-list">
-							{%- for path in page_paths -%}
+							{%- for path in default_paths -%}
 								{%- assign menu_item = site.pages | where: "path", path | first -%}
 
 								{%- if menu_item.title and menu_item.exclude_from_nav != true and menu_item.lang == lang -%}

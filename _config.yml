@@ -32,6 +32,14 @@ plugins:
   # - jekyll-polyglot
   # - jekyll-coffeescript
 
+defaults:
+  - 
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      menu_order: 100
+
 languages: ["en", "ru"]
 default_lang: "en"
 exclude_from_localization: ["js", "img", "css"]
