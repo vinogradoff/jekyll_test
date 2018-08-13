@@ -80,14 +80,16 @@
 			color: $white
 	&-icon
 		vertical-align: top
+		// flex: 1
 		max-width: 3.5em
-		flex: 1
+		min-width: 3.5em
 		user-select: none
 		margin-right: 1em
 		+min-screen($tablet)
 			margin-right: 1.5em
 		+min-screen($desktop)
 			max-width: 5em
+			min-width: 5em
 	&-header
 		font-size: 1.25em
 	&-view
