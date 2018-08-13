@@ -59,14 +59,14 @@
 						</div>
 						<div class="lang_switch-dropdown">
 							{% for lang_item in site.languages %}
-								{%- assign lang_paht = page.lang | prepend: "/" -%}
+								{%- assign lang_path = page.lang | prepend: "/" -%}
 
 								{%- if lang_item != page.lang -%}
 									<a class="lang_switch-dropdown-item" href="
 										{% if lang_item == site.default_lang %}
-											{{site.url | absolute_url }}{{ page.url | replace: lang_paht, '' }}
+											{{site.url | absolute_url }}{{ page.url | replace: lang_path, '' }}
 										{% else %}
-											{{site.url | absolute_url }}/{{ lang_item }}{{ page.url | replace: lang_paht, '' }}
+											{{site.url | absolute_url }}/{{ lang_item }}{{ page.url | replace: lang_path, '' }}
 										{% endif %}
 										">
 
