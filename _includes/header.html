@@ -6,7 +6,11 @@
 	<div class="container">
 		<div class="row">
 			<div class="header-left col-xs-2">
-				<a class="logo" rel="author" href="{{ '/' | absolute_url }}" title="{{ site.title | escape }}">
+				<a class="logo" rel="author" href="{% if lang == site.default_lang %} 
+											{{site.url}}
+										{% else %} 
+												{{site.url}}/{{ lang }}
+										{% endif %}">
 					{% include selenide-logo.svg %}
 				</a>
 			</div>
@@ -62,7 +66,7 @@
 																{{site.url}}{{page.url}}
 															{% else %} 
 																	{{site.url}}/{{ lang }}{{page.url}}
-															{% endif %}"">
+															{% endif %}">
 
 										<img class="lang_switch-image" src="{{ "/" | absolute_url }}img/flag-{{ lang_item }}.svg" title="{{lang_item}}" alt="{{lang_item}}">
 										{% comment %}
