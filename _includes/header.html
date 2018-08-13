@@ -7,9 +7,9 @@
 		<div class="row">
 			<div class="header-left col-xs-2">
 				<a class="logo" rel="author" href="{% if lang == site.default_lang %} 
-											{{site.url}}
+											{{site.url | absolute_url }}
 										{% else %} 
-												{{site.url}}/{{ lang }}
+												{{site.url | absolute_url }}/{{ lang }}
 										{% endif %}">
 					{% include selenide-logo.svg %}
 				</a>
