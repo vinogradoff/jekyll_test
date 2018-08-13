@@ -66,9 +66,9 @@
 								{%- if lang_item != lang -%}
 									<a class="lang_switch-dropdown-item" href="
 										{% if lang_item == site.default_lang %}
-											{{site.url}}{{ page.url | replace: lang_paht, '' }}
+											{{site.url | absolute_url }}{{ page.url | replace: lang_paht, '' }}
 										{% else %}
-											{{site.url}}/{{ lang_item }}{{ page.url | replace: lang_paht, '' }}
+											{{site.url | absolute_url }}/{{ lang_item }}{{ page.url | replace: lang_paht, '' }}
 										{% endif %}
 										">
 
