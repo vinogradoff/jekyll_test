@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Руководство разработчика
+title: Документция
 permalink: /ru/developer-guide/
 lang: ru
 ---
