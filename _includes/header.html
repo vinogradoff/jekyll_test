@@ -4,9 +4,9 @@
 	<div class="container">
 		<div class="row">
 			<div class="header-left col-xs-2">
-				<a class="logo" rel="author" href="{% if page.lang == site.default_lang %} 
+				<a class="logo" rel="author" href="{% if page.lang == site.default_lang %}
 											{{site.url | absolute_url }}
-										{% else %} 
+										{% else %}
 												{{site.url | absolute_url }}/{{ page.lang }}
 										{% endif %}">
 					{% include selenide-logo.svg %}
@@ -46,7 +46,7 @@
 					</nav>
 				{%- endif -%}
 
-				<div class="lang_wrapper">
+				<div class="lang_switch-wrapper">
 					<div class="lang_switch">
 						<div class="lang_switch-current">
 							<img class="lang_switch-image" src="{{ '/' | absolute_url }}img/flag-{{ page.lang }}.svg" title="{{ page.lang }}" alt="{{ page.lang }}">

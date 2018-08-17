@@ -83,7 +83,10 @@ $header-height: 64px
 				width: 0
 				border-bottom: 2px solid currentColor
 				width: 0%
-			&:hover,
+			&:hover
+				color: $heliotropepink
+				&::after
+					width: 100%
 			&.active
 				color: $white
 				&::after
@@ -91,39 +94,40 @@ $header-height: 64px
 			+min-screen($tablet)
 				font-size: 1em
 
-
-.lang_wrapper
-	position: relative
-	margin: 15px 24px 0 1em
-	width: 40px
-	height: 100%
-	+min-screen($tablet)
-		margin-right: 0
-	+min-screen($desktop)
-		margin-left: 1.5em
-		
 //language switch styles
 .lang_switch
 	position: absolute
-	background-color: #3a3e4e
 	border-radius: 4px
-	&-image		
-		padding: 3px 8px
+	padding: .25rem 0
+	transition: all .3s ease
+	&.is-open,
+	&:hover
+		background-color: $bright-gray
+	&-wrapper
+		position: relative
+		margin: 0.6rem 1rem 0
+		width: 40px
+		height: 100%
+		+min-screen($tablet)
+			margin-right: 0
+		+min-screen($desktop)
+			margin-left: 2rem
+	&-image
+		vertical-align: middle
 	&-current
-		// position: relative
 		display: flex
 		flex-direction: row
 		align-items: center
 		justify-content: center
 		cursor: pointer
 		font-weight: bold
-		color: $white			
+		color: $white
+		padding: 3px 8px
 	&-arrow
 		fill: $white
 		font-size: 12px
 		width: 25px
 		height: 25px
-		// margin-left: 5px
 		padding: 5px
 	&-name
 		color: $white
@@ -132,8 +136,7 @@ $header-height: 64px
 	&-dropdown
 		top: 100%
 		display: none
-		& .lang_switch-image
-				padding: 0 8px 0
-		& .lang_switch-image:hover
-				background-color: $dark
-				
+		&-item
+			padding: 4px 8px
+			&:hover
+				background-color: rgba($baltic-sea, .6)
