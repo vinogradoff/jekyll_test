@@ -99,6 +99,21 @@
 		margin-top: .8em
 		font-weight: 500
 		font-size: 1em
+		text-transform: uppercase
+		&::after
+			content: ''
+			margin-left: 1em
+			display: inline-block
+			vertical-align: middle
+			background-image: url($button_jumdotron_arrow)
+			background-repeat: no-repeat
+			background-position: 50% 50%
+			background-size: 100% 100%
+			width: 1em
+			height: 1em
+			transition: all .3s ease
+	&:hover &-view::after
+		transform: translateX(25%)
 
 .toggle-menu-button
 	width: 28px
