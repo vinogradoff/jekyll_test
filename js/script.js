@@ -38,22 +38,18 @@
 	});
 
 /* scroll revel blocks*/
-	console.log('test');
-
 	window.sr = ScrollReveal();
 	sr.reveal('.bottom-reveal', {
 		viewOffset: { top: 64 },
 		duration: 800
 	});
 
-/* slick slider */
-	$(document).ready(function(){
-		$('.testimonials-slider').slick({
-			slidesToShow: 1,
-			slidesToScroll: 1,
-			autoplay: true,
-			autoplaySpeed: 3000
-		});
+/* init js slider */
+	$('.js-slider').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		autoplay: true,
+		autoplaySpeed: 3000
 	});
 
 })(jQuery);
