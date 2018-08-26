@@ -197,6 +197,44 @@
 			&:hover
 				fill: $heliotropepink
 
+.button_play_link
+	text-decoration: none
+	color: currentColor
+	font-size: 1rem
+	overflow: hidden
+	display: flex
+	align-items: center
+	transition: all .3s ease
+	+min-screen($desktop)
+		&:hover
+			color: $heliotropepink
+	&-icon
+		width: 32px
+		height: 32px
+		min-width: 32px
+		border-radius: 50%
+		position: relative
+		background-color: currentColor
+		margin-right: .5rem
+		&:before
+			+arr(8, 10, $white, r)
+			content: ''
+			position: absolute
+			left: 50%
+			top: 50%
+			margin-left: -3px
+			margin-top: -5px
+			transition: all .3s ease
+	&.is-white
+		color: $white
+		+min-screen($desktop)
+			&:hover
+				color: $heliotropepink
+	&.is-white &-icon:before
+		+arr(8, 10, $baltic-sea, r)
+	+min-screen($desktop)
+		&.is-white:hover &-icon:before
+			+arr(8, 10, $white, r)
 
 /*Mouse-icon begin*/
 .mouse
