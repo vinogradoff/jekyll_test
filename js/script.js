@@ -59,4 +59,9 @@
 		autoplaySpeed: 3000
 	});
 
+/* particlesJS */
+	particlesJS.load('js_hero_bg', '/js/vendor/particlesjs-config.json', function() {
+		// console.log('callback - particles.js config loaded');
+	});
+
 })(jQuery);
