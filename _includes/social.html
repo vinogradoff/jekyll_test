@@ -1,7 +1,7 @@
 <ul class="social-media-list">
 	{%- if site.dribbble_username -%}
 		<li>
-			<a href="https://dribbble.com/{{ site.dribbble_username | cgi_escape | escape }}" title="{{site.dribbble_username}}">
+			<a href="https://dribbble.com/{{ site.dribbble_username }}" title="{{site.dribbble_username}}">
 				<svg class="icon icon-dribbble">
 					<use xlink:href="{{ '/img/sprite.svg#dribbble' | relative_url }}"></use>
 				</svg>
@@ -10,7 +10,7 @@
 	{%- endif -%}
 	{%- if site.facebook_username -%}
 		<li>
-			<a href="https://www.facebook.com/{{ site.facebook_username | cgi_escape | escape }}" title="{{site.facebook_username}}">
+			<a href="https://www.facebook.com/{{ site.facebook_username }}" title="{{site.facebook_username}}">
 				<svg class="icon icon-facebook">
 					<use xlink:href="{{ '/img/sprite.svg#facebook' | relative_url }}"></use>
 				</svg>
@@ -19,7 +19,7 @@
 	{%- endif -%}
 	{%- if site.flickr_username -%}
 		<li>
-			<a href="https://www.flickr.com/photos/{{ site.flickr_username | cgi_escape | escape }}" title="{{site.flickr_username}}">
+			<a href="https://www.flickr.com/photos/{{ site.flickr_username }}" title="{{site.flickr_username}}">
 				<svg class="icon icon-flickr">
 					<use xlink:href="{{ '/img/sprite.svg#flickr' | relative_url }}"></use>
 				</svg>
@@ -28,7 +28,7 @@
 	{%- endif -%}
 	{%- if site.github_username -%}
 		<li>
-			<a href="https://github.com/{{ site.github_username | cgi_escape | escape }}" title="{{site.github_username}}">
+			<a href="https://github.com/{{ site.github_username }}" title="{{site.github_username}}">
 				<svg class="icon icon-github">
 					<use xlink:href="{{ '/img/sprite.svg#github' | relative_url }}"></use>
 				</svg>
@@ -37,7 +37,7 @@
 	{%- endif -%}
 	{%- if site.instagram_username -%}
 		<li>
-			<a href="https://instagram.com/{{ site.instagram_username | cgi_escape | escape }}" title="{{site.instagram_username}}">
+			<a href="https://instagram.com/{{ site.instagram_username }}" title="{{site.instagram_username}}">
 				<svg class="icon icon-instagram">
 					<use xlink:href="{{ '/img/sprite.svg#instagram' | relative_url }}"></use>
 				</svg>
@@ -46,7 +46,7 @@
 	{%- endif -%}
 	{%- if site.linkedin_username -%}
 		<li>
-			<a href="https://www.linkedin.com/in/{{ site.linkedin_username | cgi_escape | escape }}" title="{{site.linkedin_username}}">
+			<a href="https://www.linkedin.com/in/{{ site.linkedin_username }}" title="{{site.linkedin_username}}">
 				<svg class="icon icon-linkedin">
 					<use xlink:href="{{ '/img/sprite.svg#linkedin' | relative_url }}"></use>
 				</svg>
@@ -55,7 +55,7 @@
 	{%- endif -%}
 	{%- if site.pinterest_username -%}
 		<li>
-			<a href="https://www.pinterest.com/{{ site.pinterest_username | cgi_escape | escape }}" title="{{site.pinterest_username}}">
+			<a href="https://www.pinterest.com/{{ site.pinterest_username }}" title="{{site.pinterest_username}}">
 				<svg class="icon icon-pinterest">
 					<use xlink:href="{{ '/img/sprite.svg#pinterest' | relative_url }}"></use>
 				</svg>
@@ -64,7 +64,7 @@
 	{%- endif -%}
 	{%- for mst in site.mastodon -%}{%- if mst.username and mst.instance -%}
 		<li>
-			<a href="https://{{ mst.instance | cgi_escape | escape}}/@{{mst.username}}" title="{{mst.username}}">
+			<a href="https://{{ mst.instance}}/@{{mst.username}}" title="{{mst.username}}">
 				<svg class="icon icon-mastodon">
 					<use xlink:href="{{ '/img/sprite.svg#mastodon' | relative_url }}"></use>
 				</svg>
@@ -73,7 +73,7 @@
 	{%- endif -%}{%- endfor -%}
 	{%- if site.twitter_username -%}
 		<li>
-			<a href="https://www.twitter.com/{{ site.twitter_username | cgi_escape | escape }}" title="{{site.twitter_username}}">
+			<a href="https://www.twitter.com/{{ site.twitter_username }}" title="{{site.twitter_username}}">
 				<svg class="icon icon-twitter">
 					<use xlink:href="{{ '/img/sprite.svg#twitter' | relative_url }}"></use>
 				</svg>
@@ -82,7 +82,7 @@
 	{%- endif -%}
 	{%- if site.youtube_username -%}
 		<li>
-			<a href="https://youtube.com/{{ site.youtube_username | cgi_escape | escape }}" title="{{ site.youtube_username| escape }}">
+			<a href="https://youtube.com/{{ site.youtube_username }}" title="{{ site.youtube_username| escape }}">
 				<svg class="icon icon-youtube">
 					<use xlink:href="{{ '/img/sprite.svg#youtube' | relative_url }}"></use>
 				</svg>
