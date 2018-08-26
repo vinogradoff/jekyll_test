@@ -29,24 +29,13 @@
 		.end().removeClass('is-open');
 	});
 
-
-/* Scroll HERO block */
-	$body.on('click', '#hero_scroll', function(event) {
-		event.preventDefault();
-		let scrollHeight = $(this).parents('.hero').innerHeight();
-		window.scroll({top: scrollHeight, behavior: 'smooth'});
-	});
-
 /* JS Button scroll */
-	$body.on('click', '.js-scroll-button', function(event) {
+	$body.on('click', '.js_scroll_button', function(event) {
 		event.preventDefault();
 		let target = $(this).data('target');
 
-		console.log(target);
-
 		if(target) {
 			let position = $(target).offset().top - 64;  /*64px is header height*/
-			console.log(position);
 
 			$("body, html").animate({
 				scrollTop: position
