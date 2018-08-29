@@ -1,0 +1,14 @@
+.tabs {
+	margin: 2rem 0;
+	.tabs-link {
+		&.is-active {
+			color: $heliotropepink;
+		}
+	}
+	&-content {
+		display: none;
+		&.is-active {
+			display: block;
+		}
+	}
+}

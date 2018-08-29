@@ -3,7 +3,9 @@
 	let $body = $('body')
 		, $menuButton = $('.toggle-menu-button')
 		, $langSwich = $('.lang_switch')
-		, menuShowClass = 'is-menu-show';
+		, menuShowClass = 'is-menu-show'
+		, isOpenClass = 'is-open'
+		, isActiveClass = 'is-active';
 
 /* init menu open */
 	$menuButton.on('click', function() {
@@ -19,14 +21,14 @@
 /* init lang_switch open */
 	$langSwich.on('click', function() {
 		$(this).find('.lang_switch-dropdown').slideToggle()
-		.end().toggleClass('is-open');
+		.end().toggleClass(isOpenClass);
 	});
 
 	$(document).click( function(event){
 		if( $(event.target).closest('.lang_switch').length )
 			return;
 		$langSwich.find('.lang_switch-dropdown').slideUp()
-		.end().removeClass('is-open');
+		.end().removeClass(isOpenClass);
 	});
 
 /* JS Button scroll */
@@ -43,6 +45,21 @@
 		}
 	});
 
+/* Init tabs */
+	$body.on('click', '.js_tabs_link', function(event) {
+		event.preventDefault();
+		let $this = $(this)
+			, tabId = $this.attr('href');
+
+		if(!$this.hasClass(isActiveClass)){
+			$('.js_tabs_link').removeClass(isActiveClass);
+
+			$this.addClass(isActiveClass);
+
+			$('.js_tabs_content').removeClass(isActiveClass)
+			.end().find(tabId).addClass(isActiveClass);
+		}
+	});
 
 /* scroll revel blocks*/
 	window.sr = ScrollReveal();

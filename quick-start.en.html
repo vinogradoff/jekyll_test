@@ -38,6 +38,15 @@ menu_order: 2
 
 <div class="row">
 	<div class="col-xs-12 text-left">
+
+		<div class="tabs">
+			<div class="tabs-header">
+				<a href="#tab-1" class="js_tabs_link tabs-link is-active">For <strong>Maven</strong> users:</a>
+				<a href="#tab-2" class="js_tabs_link tabs-link">For <strong>Ivy</strong> users:</a>
+				<a href="#tab-3" class="js_tabs_link tabs-link">For <strong>Gradle</strong> users:</a>
+			</div>
+
+			<div id="tab-1" class="js_tabs_content tabs-content is-active">
 {% highlight ruby %}
 	<dependency>
 	 <groupId>com.codeborne</groupId>
@@ -61,5 +70,14 @@ menu_order: 2
 			import static com.codeborne.selenide.Condition.*;
 		</code>
 	</pre>
+
+			</div>
+			<div id="tab-2" class="js_tabs_content tabs-content">
+				<h2>Tab - 2</h2>
+			</div>
+			<div id="tab-3" class="js_tabs_content tabs-content">
+				<h2>Tab - 3</h2>
+			</div>
+		</div>
 	</div>
 </div>
