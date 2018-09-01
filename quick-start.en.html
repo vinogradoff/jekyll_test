@@ -45,29 +45,30 @@ menu_order: 2
 			</div>
 
 			<div id="tab-1" class="js_tabs_content tabs-content is-active">
-{% highlight xml %}
+	{% highlight xml %}
 	<dependency>
-	    <groupId>com.codeborne</groupId>
-	    <artifactId>selenide</artifactId>
-	    <version>{{site.SELENIDE_VERSION}}</version>
-	    <scope>test</scope>
+	  <groupId>com.codeborne</groupId>
+	  <artifactId>selenide</artifactId>
+	  <version>{{site.SELENIDE_VERSION}}</version>
+	  <scope>test</scope>
 	</dependency>
-{% endhighlight %}
+	{% endhighlight %}
 
+	{% highlight java %}
+	 import static com.codeborne.selenide.Selenide.*;
+	 import static com.codeborne.selenide.Condition.*;
+	{% endhighlight %}
 
-	<pre>
-		<code class="language-Ruby">
-			<dependency>
-				<groupId>com.codeborne</groupId>
-				<artifactId>selenide</artifactId>
-				<version>4.12.0</version>
-				<scope>test</scope>
-			</dependency>
-
-			import static com.codeborne.selenide.Selenide.*;
-			import static com.codeborne.selenide.Condition.*;
-		</code>
-	</pre>
+	{% highlight java %}
+	@Test
+	public void userCanLoginByUsername() {
+	  open("/login");
+	  $(By.name("user.name")).setValue("johny");
+	  $("#submit").click();
+	  $(".loading_progress").should(disappear); // Waits until element disappears
+	  $("#username").shouldHave(text("Hello, Johny!")); // Waits until element gets text
+	}
+	{% endhighlight %}
 
 			</div>
 			<div id="tab-2" class="js_tabs_content tabs-content">
