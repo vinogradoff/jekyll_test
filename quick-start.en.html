@@ -35,7 +35,7 @@ menu_order: 2
 </div>
 
 <div class="row">
-	<div class="col-xs-12 text-left">
+	<div class="col-xs-12">
 
 		<div class="tabs">
 			<div class="tabs-header">
@@ -45,7 +45,7 @@ menu_order: 2
 			</div>
 
 			<div id="tab-1" class="js_tabs_content tabs-content is-active">
-			<div class="mb-6 mb-md-8">
+				<div class="mb-6 mb-md-8">
 {% highlight xml %}
 <dependency>
   <groupId>com.codeborne</groupId>
@@ -54,26 +54,27 @@ menu_order: 2
   <scope>test</scope>
 </dependency>
 {% endhighlight %}
-			</div>
+				</div>
 
-			<h2 class="font-weight-semibold strip_header">
-				<img class="strip_header-icon" src="{{ '/' | absolute_url }}img/icon-3.svg" alt=""> Start writing test</h2>
+				<h2 class="font-weight-semibold strip_header">
+					<img class="strip_header-icon" src="{{ '/' | absolute_url }}img/icon-3.svg" alt=""> Start writing test
+				</h2>
 
-			<ul class="dotted_list">
-				<li>Import required classes:</li>
-			</ul>
-			<div class="mb-5">
+				<ul class="dotted_list">
+					<li>Import required classes:</li>
+				</ul>
+				<div class="mb-5">
 {% highlight java %}
  import static com.codeborne.selenide.Selenide.*;
  import static com.codeborne.selenide.Condition.*;
 {% endhighlight %}
-			</div>
+				</div>
 
-			<ul class="dotted_list">
-				<li>and write test:</li>
-			</ul>
+				<ul class="dotted_list">
+					<li>and write test:</li>
+				</ul>
 
-			<div class="mb-5">
+				<div class="mb-5">
 {% highlight java %}
 @Test
 public void userCanLoginByUsername() {
@@ -84,64 +85,76 @@ public void userCanLoginByUsername() {
   $("#username").shouldHave(text("Hello, Johny!")); // Waits until element gets text
 }
 {% endhighlight %}
-			</div>
+				</div>
 
 				<h2 class="mb-4">🤟 Ready! </h2>
 
-				<div class="bd_call_out mb-6 mb-lg-8">
+				<div class="bd_call_out">
 					<img class="bd_call_out-icon" src="{{ '/' | absolute_url }}img/comment-solid.svg">
 					You can choose any testing framework you prefer: JUnit, TestNG, Cucumber, ScalaTest, JBehave - whatever.
 					Run as a usual tests. You can run from IDE, or as an ANT script, or “mvn test”. You don’t need to change anything in your process.
 				</div>
-
 			</div>
+
 			<div id="tab-2" class="js_tabs_content tabs-content">
 				<h2>Tab - 2</h2>
 			</div>
+
 			<div id="tab-3" class="js_tabs_content tabs-content">
 				<h2>Tab - 3</h2>
 			</div>
-
-			<div class="separator mb-lg-6"></div>
-
-			<h2>
-				Do you want to see a working example?
-			</h2>
-
-			<p class="mb-3">
-				We created <a href="#" class="text-heliotropepink font-weight-bold nounderline">Selenide examples</a> group on github with examples of using Selenide:
-			</p>
-			<ul class="dotted_list mb-4">
-				<li>
-					for testing <a href="#" class="text-heliotropepink font-weight-bold nounderline">Gmail,</a>
-				</li>
-				<li>
-					for testing 
-					<a href="#" class="text-heliotropepink font-weight-bold nounderline">Google search.</a>
-				</li>
-				<li>
-					for testing real 
-					<a href="#" class="text-heliotropepink font-weight-bold nounderline">internet-bank</a>
-				</li>
-				<li>
-					for testing real 
-					<a href="#" class="text-heliotropepink font-weight-bold nounderline">internet-bank</a>
-				</li>
-			</ul>
-
-			<h2 class="mb-4">Share your examples!</h2>
-			<p class="mb-6">If you have any examples of Selenide usage, feel free to share them with us!</p>
-
-
-			<div class="row">
-				<div class="col-xs-12 col-md-10 col-md-offset-1  col-lg-8 col-lg-offset-2">
-					<img class="rounded" src="{{ '/' | absolute_url }}img/macos_sierra_2-wallpaper-1152x720.jpg">
-				</div>
-				
-			</div>
-
-			<div class="separator"></div>
-
 		</div>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-xs-12">
+		<div class="separator mb-lg-6"></div>
+
+		<h2>
+			Do you want to see a working example?
+		</h2>
+		
+		<p class="mb-3">
+			We created <a href="#" class="text-heliotropepink font-weight-bold nounderline">Selenide examples</a> group on github with examples of using Selenide:
+		</p>
+
+		<ul class="dotted_list mb-4">
+			<li>
+				for testing <a href="#" class="text-heliotropepink font-weight-bold nounderline">Gmail,</a>
+			</li>
+			<li>
+				for testing 
+				<a href="#" class="text-heliotropepink font-weight-bold nounderline">Google search.</a>
+			</li>
+			<li>
+				for testing real 
+				<a href="#" class="text-heliotropepink font-weight-bold nounderline">internet-bank</a>
+			</li>
+			<li>
+				for testing real 
+				<a href="#" class="text-heliotropepink font-weight-bold nounderline">internet-bank</a>
+			</li>
+		</ul>
+
+		<h2 class="mb-4">Share your examples!</h2>
+
+		<p class="mb-4">If you have any examples of Selenide usage, feel free to share them with us!</p>
+
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-xs-12 col-md-10 col-md-offset-1  col-lg-8 col-lg-offset-2">
+		<img class="rounded" src="{{ '/' | absolute_url }}img/macos_sierra_2-wallpaper-1152x720.jpg">
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-xs-12">
+		<div class="separator"></div>
+
+		{%- include disqus_comments.html -%}
+		
 	</div>
 </div>
