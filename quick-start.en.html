@@ -54,10 +54,20 @@ menu_order: 2
 	</dependency>
 	{% endhighlight %}
 
+			<h2 class="font-weight-semibold"><img src="{{ '/' | absolute_url }}img/icon-3.svg" alt=""> Start writing test</h2>
+
+			<ul>
+				<li>Import required classes:</li>
+			</ul>
+
 	{% highlight java %}
 	 import static com.codeborne.selenide.Selenide.*;
 	 import static com.codeborne.selenide.Condition.*;
 	{% endhighlight %}
+
+			<ul>
+				<li>and write test:</li>
+			</ul>
 
 	{% highlight java %}
 	@Test
@@ -69,7 +79,24 @@ menu_order: 2
 	  $("#username").shouldHave(text("Hello, Johny!")); // Waits until element gets text
 	}
 	{% endhighlight %}
+				<h3>🤟 Ready! </h3>
 
+				<div class="bd_call_out">
+					<img class="bd_call_out-icon" src="{{ '/' | absolute_url }}img/comment-solid.svg">
+					You can choose any testing framework you prefer: JUnit, TestNG, Cucumber, ScalaTest, JBehave - whatever.
+					Run as a usual tests. You can run from IDE, or as an ANT script, or “mvn test”. You don’t need to change anything in your process.
+				</div>
+
+				<h3>
+					Do you want to see a working example?
+				</h3>
+
+				<p>
+					We created <a href="#" class="text-heliotropepink font-weight-bold"></a> group on github with examples of using Selenide:
+				</p>
+				<ul>
+					<li>	</li>
+				</ul>
 			</div>
 			<div id="tab-2" class="js_tabs_content tabs-content">
 				<h2>Tab - 2</h2>
