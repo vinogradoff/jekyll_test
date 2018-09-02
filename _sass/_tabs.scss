@@ -1,10 +1,37 @@
 .tabs {
 	margin: 2rem 0;
-	.tabs-link {
-		&.is-active {
-			color: $heliotropepink;
-		}
+	&-header {
+		margin-bottom: 2.5rem;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		text-align: center;
+		border-bottom: 2px solid $porcelain;
+		font-size: 1.5rem;
 	}
+	&-link {
+		flex: 1;
+		cursor: pointer;
+		text-decoration: none;
+		padding: 1rem;
+		border-radius: 2.5rem 2.5rem 0 0;
+		border: solid 2px $porcelain;
+		margin-bottom: -2px;
+		transition: all $t-n $tf-prt;
+		color: $heliotropepink;
+		& + & {
+			margin-left: 2rem;
+		}
+		@include min-screen($desktop){
+			&:hover {
+				color: $black;
+			}
+		};
+		&.is-active {
+			color: $black;
+			border-bottom-color: $white;
+		}
+	};
 	&-content {
 		display: none;
 		&.is-active {
