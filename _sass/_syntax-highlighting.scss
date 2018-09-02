@@ -6,10 +6,11 @@
 }
 pre,
 code {
-  font-size: 15px;
-  border: 1px solid #e8e8e8;
-  border-radius: 3px;
-  background-color: #eef;
+  font-size: 16px;
+  line-height: 1.6;
+  // border: 1px solid #e8e8e8;
+  // border-radius: 10px;
+  /* background-color: $alabaster; */
 }
 
 code {
@@ -27,8 +28,11 @@ pre {
  }
 
 .highlight {
-  background: #fff;
+  background-color: $alabaster;
+  border-radius: 10px;
+  // background: #fff;
   margin: 2rem 0;
+  padding: 1.5rem;
   // @extend %vertical-rhythm;
 
   .highlighter-rouge & {
