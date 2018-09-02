@@ -85,6 +85,28 @@ ul
 			top: .5rem
 			border-radius: 50%
 
+.strip_header
+	+min-screen($tablet)
+		display: flex
+		align-items: center
+		flex-direction: row
+	&::after
+		content: ''
+		border-top: 2px solid $heliotropepink
+		width: 100%
+		display: block
+		margin-top: .5rem
+		+min-screen($tablet)
+			flex: 1
+			margin-top: 0
+			margin-left: 2rem
+	&-icon
+		max-width: 30%
+		align-self: self-start
+		display: block
+		+min-screen($tablet)
+			display: inline-block
+			
 
 img
 	max-width: 100%
