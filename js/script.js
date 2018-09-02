@@ -77,65 +77,67 @@
 	});
 
 /* particlesJS */
-	particlesJS('js_hero_bg', {
-  "particles": {
-    "number": {
-      "value": 80
-    },
-    "color": {
-      "value": "#7c7d7d"
-    },
-    "shape": {
-      "type": "circle",
-      "stroke": {
-        "width": 0,
-        "color": "#000000"
-      }
-    },
-    "opacity": {
-      "value": 0.68,
-      "random": false,
-      "anim": {
-        "enable": false,
-        "speed": 1,
-        "opacity_min": 0.1,
-        "sync": false
-      }
-    },
-    "size": {
-      "value": 3,
-      "random": true,
-      "anim": {
-        "enable": false,
-        "speed": 40,
-        "size_min": 0.1,
-        "sync": false
-      }
-    },
-    "line_linked": {
-      "distance": 150,
-      "color": "#7c7d7d",
-      "opacity": 0.4,
-    },
-    "move": {
-      "enable": true,
-      "speed": 6,
-      "random": true,
-    }
-  },
-  "interactivity": {
-    // "detect_on": "canvas",
-    "events": {
-      "onhover": {
-        "enable": false,
+if($('#js_hero_bg').length){
+  	particlesJS('js_hero_bg', {
+    "particles": {
+      "number": {
+        "value": 80
       },
-      "onclick": {
-        "enable": false,
+      "color": {
+        "value": "#7c7d7d"
       },
-      "resize": true
+      "shape": {
+        "type": "circle",
+        "stroke": {
+          "width": 0,
+          "color": "#000000"
+        }
+      },
+      "opacity": {
+        "value": 0.68,
+        "random": false,
+        "anim": {
+          "enable": false,
+          "speed": 1,
+          "opacity_min": 0.1,
+          "sync": false
+        }
+      },
+      "size": {
+        "value": 3,
+        "random": true,
+        "anim": {
+          "enable": false,
+          "speed": 40,
+          "size_min": 0.1,
+          "sync": false
+        }
+      },
+      "line_linked": {
+        "distance": 150,
+        "color": "#7c7d7d",
+        "opacity": 0.4,
+      },
+      "move": {
+        "enable": true,
+        "speed": 6,
+        "random": true,
+      }
     },
-  },
-  "retina_detect": true
-});
+    "interactivity": {
+      // "detect_on": "canvas",
+      "events": {
+        "onhover": {
+          "enable": false,
+        },
+        "onclick": {
+          "enable": false,
+        },
+        "resize": true
+      },
+    },
+    "retina_detect": true
+  });
+}
 
 })(jQuery);
