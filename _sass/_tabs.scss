@@ -21,7 +21,9 @@
 		color: $heliotropepink;
 		min-height: 100%;
 		& + & {
-			margin-left: 2rem;
+			@include min-screen($desktop){
+				margin-left: 2rem;
+			}
 		}
 		@include min-screen($desktop){
 			&:hover {
