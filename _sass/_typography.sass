@@ -64,23 +64,26 @@ small,
 	font-size: 80%
 	font-weight: $font-weight-normal
 
-ul,
+ul
+	font-size: 1.125rem
+	li
+		margin-bottom: .5rem
+
 .dotted_list
 	list-style: none
-	font-size: 1.125rem
 	li,
 	.dotted_list-item
 		position: relative
-		margin-bottom: .5rem
+		padding-left: 2.5rem
 		&::before
 			content: ''
 			position: absolute
 			width: .5rem
 			height: .5rem
 			background-color: $heliotropepink
-			left: 0
+			left: .5rem
 			top: .5rem
-			
+			border-radius: 50%
 
 
 img
