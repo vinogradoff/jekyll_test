@@ -136,3 +136,24 @@ input[type="submit"]
 
 .rounded
 	border-radius: .625rem
+
+.image_wave_wrap
+	position: relative
+	display: inline-block
+	img
+		position: relative
+		z-index: 2
+	&::before
+		content: ''
+		position: absolute
+		z-index: 1
+		width: 700px
+		background-image: url($bg_wave_left)
+		height: 554px
+		background-repeat: no-repeat
+		background-position: 50% 50%
+		top: 56%
+		right: 70%
+		// margin-left: -229px
+		margin-top: -311px
+
