@@ -11,24 +11,32 @@
 		, $codeWrap = $(codeWrapClass);
 
 /*init copy code button*/
+
+	function copyToClipboard(element) {
+		var $temp = $("<textarea>");
+		$("body").append($temp);
+		$temp.val($(element).text()).select();
+		document.execCommand("copy");
+		$temp.remove();
+	}
 	$body.find(codeWrapClass).each(function(index, el) {
 		$(el).prepend(
 			$('<button>')
 			.addClass(copyButtonClass)
 			.attr({ title : 'Copy' })
 		);
-
 	});
-	// $body.on('click', codeWrapClass, function(event) {
-
-	// 	event.preventDefault();
-	// 	/* Act on the event */
-	// });
+	$body.on('click', '.'+copyButtonClass, function(event) {
+		event.preventDefault();
+		$copyCodeWrap = $(event.target).parents(codeWrapClass);
+		copyToClipboard($copyCodeWrap);
+	});
 
 /* init menu open */
 	$menuButton.on('click', function() {
 		$body.toggleClass(menuShowClass);
 	});
+
 
 	$(document).click( function(event){
 		if( $(event.target).closest('.header').length )
