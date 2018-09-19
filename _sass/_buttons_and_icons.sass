@@ -48,6 +48,28 @@
 	+max-screen($desktop)
 		min-width: 100%
 
+%button-copy
+	cursor: pointer
+	width: 2rem
+	height: 2rem
+	background-color: rgba($baltic-sea, .8)
+	border-radius: 4px
+	box-shadow: 0 16px 16px 0 rgba($baltic-sea, 0.2)
+	background-image: url(create-svg($copy_icon_path, $white, $size: '1792'))
+	background-position: 50% 50%
+	background-repeat: no-repeat
+	background-size: 18px 18px
+	transition: all .4s ease
+	opacity: 0
+	&:hover
+		box-shadow: 0 16px 16px 0 rgba($baltic-sea, 0.3)
+	.highlight &
+		position: absolute
+		right: 16px
+		top: 16px
+	.highlight:hover &
+		opacity: 1
+
 .button
 	@extend %button
 .button-mobile-wide
@@ -57,6 +79,9 @@
 .button-secondary
 	@extend %button
 	@extend %button-secondary
+.button-copy
+	@extend %button-copy
+
 
 .button_jumdotron
 	display: flex

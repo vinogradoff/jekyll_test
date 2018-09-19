@@ -5,7 +5,25 @@
 		, $langSwich = $('.lang_switch')
 		, menuShowClass = 'is-menu-show'
 		, isOpenClass = 'is-open'
-		, isActiveClass = 'is-active';
+		, isActiveClass = 'is-active'
+		, copyButtonClass = 'button-copy'
+		, codeWrapClass = '.highlight'
+		, $codeWrap = $(codeWrapClass);
+
+/*init copy code button*/
+	$body.find(codeWrapClass).each(function(index, el) {
+		$(el).prepend(
+			$('<button>')
+			.addClass(copyButtonClass)
+			.attr({ title : 'Copy' })
+		);
+
+	});
+	// $body.on('click', codeWrapClass, function(event) {
+
+	// 	event.preventDefault();
+	// 	/* Act on the event */
+	// });
 
 /* init menu open */
 	$menuButton.on('click', function() {
