@@ -8,6 +8,7 @@
 		, isActiveClass = 'is-active'
 		, copyButtonClass = 'button-copy'
 		, codeWrapClass = '.highlight'
+		, copyTooltipClass = 'copy_tooltip'
 		, $codeWrap = $(codeWrapClass);
 
 /*init copy code button*/
@@ -19,17 +20,26 @@
 		document.execCommand("copy");
 		$temp.remove();
 	}
+
+
 	$body.find(codeWrapClass).each(function(index, el) {
 		$(el).prepend(
 			$('<button>')
 			.addClass(copyButtonClass)
 			.attr({ title : 'Copy' })
 		);
+		$(el).append(
+			$('<div>')
+			.addClass(copyTooltipClass)
+			.text('Coopied to clipboard')
+		);
 	});
 	$body.on('click', '.'+copyButtonClass, function(event) {
 		event.preventDefault();
 		$copyCodeWrap = $(event.target).parents(codeWrapClass);
+		$copyCodeTooltip = $(event.target).parents(codeWrapClass).find('.'+copyTooltipClass);
 		copyToClipboard($copyCodeWrap);
+		$copyCodeTooltip.fadeIn().delay(1000).fadeOut();
 	});
 
 /* init menu open */
