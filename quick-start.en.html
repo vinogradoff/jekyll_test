@@ -67,6 +67,7 @@ menu_order: 2
 {% highlight java %}
  import static com.codeborne.selenide.Selenide.*;
  import static com.codeborne.selenide.Condition.*;
+ import static com.codeborne.selenide.Selectors.*;
 {% endhighlight %}
 				</div>
 
@@ -77,12 +78,12 @@ menu_order: 2
 				<div class="mb-5">
 {% highlight java %}
 @Test
-public void userCanLoginByUsername() {
-  open("/login");
-  $(By.name("user.name")).setValue("johny");
+public void userCanLogin() {
+  open("http://example.com/login");
+  $(byName("user.name")).setValue("johny");
   $("#submit").click();
   $(".loading_progress").should(disappear); // Waits until element disappears
-  $("#username").shouldHave(text("Hello, Johny!")); // Waits until element gets text
+  $("#username").shouldHave(text("Hello, Johny!")); // Waits until element's text is displayed 
 }
 {% endhighlight %}
 				</div>
