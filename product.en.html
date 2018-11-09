@@ -72,7 +72,18 @@ menu_order: 1
 	</div>
 	<div class="col-lg-6 col-xs-12 first-lg">
 		<h3>Example of a test</h3>
-		<p class="mb-5">---code as example for concise and human readable ---</p>
+		<div class="mb-5">
+{% highlight java %}
+@Test
+public void userCanLogin() {
+  open("http://example.com/login");
+  $(byName("user.name")).setValue("johny");
+  $("#submit").click();
+  $(".loading_progress").should(disappear); // Waits until element disappears
+  $("#username").shouldHave(text("Hello, Johny!")); // Waits until element's text is displayed 
+}
+{% endhighlight %}
+		</div>
 	</div>
 </div>
 
