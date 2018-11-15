@@ -2,5 +2,5 @@ var ghpages = require('gh-pages');
 
 ghpages.publish('docks', {
 	dest: 'ascidok',
-	repo: 'https://github.com/OleksandrPavlyshch/jekyll_test.git'
+	repo: 'https://github.com/vinogradoff/selenide_new.git'
 });
