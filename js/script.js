@@ -38,7 +38,7 @@
 		event.preventDefault();
 		$copyCodeWrap = $(event.target).parents(codeWrapClass);
 		$copyCodeTooltip = $(event.target).parents(codeWrapClass).find('.'+copyTooltipClass);
-		copyToClipboard($copyCodeWrap);
+		copyToClipboard($copyCodeWrap.find('pre'));
 		$copyCodeTooltip.fadeIn().delay(1000).fadeOut();
 	});
 

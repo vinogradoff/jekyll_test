@@ -50,25 +50,36 @@
 
 %button-copy
 	cursor: pointer
-	width: 2rem
-	height: 2rem
+	width: 1.4rem
+	height: 1.4rem
 	background-color: rgba($baltic-sea, .8)
 	border-radius: .25rem
-	box-shadow: 0 1rem 1rem 0 rgba($baltic-sea, 0.2)
+	box-shadow: 0 .8rem .8rem 0 rgba($baltic-sea, 0.2)
 	background-image: url(create-svg($copy_icon_path, $white, $size: '1792'))
 	background-position: 50% 50%
 	background-repeat: no-repeat
-	background-size: 1.25rem 1.25rem
+	background-size: 70% 70%
 	transition: all .4s ease
-	opacity: 0
+	+min-screen($tablet)
+		width: 2rem
+		height: 2rem
+		box-shadow: 0 1rem 1rem 0 rgba($baltic-sea, 0.2)
+	+min-screen($desktop)
+		opacity: 0
+		visibility: hidden
 	&:hover
 		box-shadow: 0 1rem 1rem 0 rgba($baltic-sea, 0.3)
 	.highlight &
 		position: absolute
-		right: 16px
-		top: 16px
+		right: 8px
+		top: 8px
+		+min-screen($tablet)
+			right: 16px
+			top: 16px
 	.highlight:hover &
-		opacity: 1
+		+min-screen($desktop)
+			opacity: 1
+			visibility: visible
 
 .copy_tooltip
 	display: none
@@ -80,6 +91,7 @@
 	text-align: center
 	padding: 1rem
 	line-height: 1.25rem
+	box-shadow: 0 1rem 1rem 0 rgba($baltic-sea, 0.2)
 	background-color: rgba($baltic-sea, .8)
 	position: absolute
 	bottom: 1rem
