@@ -1,2 +1,2 @@
-# selenide_new
-https://vinogradoff.github.io/selenide_new/
+# selenide-site-ng
+https://selenide.github.io/selenide-site-ng/

@@ -1,22 +1,22 @@
 {
-  "name": "selenide_new",
+  "name": "selenide-site-ng",
   "version": "1.0.0",
-  "description": "https://vinogradoff.github.io/selenide_new/",
+  "description": "https://selenide.github.io/selenide-site-ng/",
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vinogradoff/selenide_new.git"
+    "url": "git+https://github.com/selenide/selenide-site-ng.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/vinogradoff/selenide_new/issues"
+    "url": "https://github.com/selenide/selenide-site-ng/issues"
   },
-  "homepage": "https://github.com/vinogradoff/selenide_new#readme",
+  "homepage": "https://github.com/selenide/selenide-site-ng#readme",
   "devDependencies": {
     "browser-sync": "^2.24.4",
     "gulp": "3.9.0",
