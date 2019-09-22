@@ -62,13 +62,7 @@
 								{%- assign lang_path = page.lang | prepend: "/" -%}
 
 								{%- if lang_item != page.lang -%}
-									<a class="lang_switch-dropdown-item" href="
-										{% if lang_item == site.default_lang %}
-											{{site.url | absolute_url }}{{ page.url | replace: lang_path, '' }}
-										{% else %}
-											{{site.url | absolute_url }}/{{ lang_item }}{{ page.url | replace: lang_path, '' }}
-										{% endif %}
-										">
+									<a class="lang_switch-dropdown-item" href="{{site.url | absolute_url }}/{{ lang_item }}{{ page.url | replace: lang_path, '' }}">
 
 										<img class="lang_switch-image" src="{{ "/" | absolute_url }}img/flag-{{ lang_item }}.svg" title="{{lang_item}}" alt="{{lang_item}}">
 										{% comment %}

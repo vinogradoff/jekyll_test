@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Contribute
-permalink: /contribute/
+permalink: /en/contribute/
 lang: en
 menu_order: 4
 ---

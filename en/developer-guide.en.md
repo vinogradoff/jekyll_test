@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Developer Guide
-permalink: /developer-guide/
+permalink: /en/developer-guide/
 lang: en
 menu_order: 3
 ---
