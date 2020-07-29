@@ -23,9 +23,7 @@ baseurl: "/" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: "jselenide"
 github_username: "codeborne/selenide"
-disqus :
-  shortname : selenide
-current_version: "5.0.1"
+current_version: "5.13.0"
 
 # Build settings
 markdown: kramdown
